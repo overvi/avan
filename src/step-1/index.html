@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang='fa' dir='rtl'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>فرم استخدام راننده</title>
+  <style>[dir='rtl'] input,[dir='rtl'] textarea,[dir='rtl'] select{direction:rtl}</style>
+  <link rel="stylesheet" href="@assets/css/main.css">
+</head>
+<body class='bg-white flex justify-center items-center min-h-screen'>
+  <div class='  gap-6  flex flex-col md:flex-row max-w-[110rem] w-full m-6'>
+    <div class='hidden rounded-[2.5rem] md:flex w-1/2 relative overflow-hidden rounded-r-3xl bg-gray-50'>
+      <div class='absolute inset-0 flex flex-col items-center justify-start pt-10 px-8 text-center'>
+        <img src='https://i.imgur.com/r6IkKq2.png' alt='logo' class='w-24 mb-6' />
+        <h3 class='text-2xl font-bold mb-6'>سفر هوشمند، با دات وان سفر</h3>
+        <svg xmlns='http://www.w3.org/2000/svg' class='w-16 h-16 mb-8' fill='currentColor' viewBox='0 0 16 16'>
+          <path d='M8 0a5.53 5.53 0 0 0-5.468 6.302C3.27 10.887 7.801 16 8 16c.198 0 4.729-5.113 5.468-9.698A5.53 5.53 0 0 0 8 0Zm0 8.25a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z'/>
+        </svg>
+        <img src='https://images.unsplash.com/photo-1607532941384-f9e09456324a?auto=format&fit=crop&w=1000&q=80' alt='car' class='w-full h-auto drop-shadow-xl' />
+      </div>
+    </div>
+    <div class='w-full rounded-[2.5rem] bg-[#F8F8F8] md:w-1/2 p-8'>
+      <div class='flex justify-between gap-4 mb-6'>
+        <div class=' text-sm leading-relaxed'>
+          <p class='  mb-1'>فرم استخدام</p>
+          <div class="font-light">فرم استخدام راننده جهت سفر با خودروهای لوکس برقی. جهت هرگونه سوال با شماره تلفن <span class='font-bold'>۰۲۱۴۵۱۰۵</span> تماس حاصل نمایید.</div>
+        </div>
+        <button class='w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-600'>i</button>
+      </div>
+      <!-- Stepper -->
+      <div class='flex items-center text-sm mb-6'>
+        <div class='flex items-center gap-2'>
+          <span class='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>۱</span>
+          اطلاعات هویتی
+        </div>
+        <span class='mx-3 h-0.5 w-4 bg-gray-300 hidden md:inline-block'></span>
+        <div class='flex items-center gap-2 text-gray-400'>
+          <span class='w-6 h-6 flex items-center justify-center rounded-full border border-gray-400'>۲</span>
+          مدارک
+        </div>
+        <span class='mx-3 h-0.5 w-4 bg-gray-300 hidden md:inline-block'></span>
+        <div class='flex items-center gap-2 text-gray-400'>
+          <span class='w-6 h-6 flex items-center justify-center rounded-full border border-gray-400'>۳</span>
+          سوابق شغلی و مهارت‌ها
+        </div>
+      </div>
+      <!-- Section title -->
+      <h2 class='text-lg font-bold mb-4'>اطلاعات هویتی</h2>
+      <!-- Form -->
+      <form class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <!-- Gender -->
+        <div class='md:col-span-2'>
+          <label class='block text-sm mb-1'>جنسیت:</label>
+          <div class='flex gap-2'>
+            <button type='button' data-toggle-group='gender' class='toggle-option flex-1 py-2 rounded-lg border border-gray-300'>آقا</button>
+            <button type='button' data-toggle-group='gender' class='toggle-option flex-1 py-2 rounded-lg bg-black text-white'>خانم</button>
+          </div>
+        </div>
+        <!-- Last name -->
+        <div>
+          <label class='block text-sm mb-1' for='lastname'>نام خانوادگی:</label>
+          <input id='lastname' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='نام خانوادگی را وارد کنید...' />
+        </div>
+        <!-- First name -->
+        <div>
+          <label class='block text-sm mb-1' for='firstname'>نام:</label>
+          <input id='firstname' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='نام را وارد کنید...' />
+        </div>
+        <!-- National ID -->
+        <div>
+          <label class='block text-sm mb-1' for='nid'>کدملی:</label>
+          <input id='nid' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='کد ملی را وارد کنید...' />
+        </div>
+        <!-- Mobile -->
+        <div>
+          <label class='block text-sm mb-1' for='mobile'>موبایل:</label>
+          <input id='mobile' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='موبایل را وارد کنید...' />
+        </div>
+        <!-- Phone -->
+        <div>
+          <label class='block text-sm mb-1' for='phone'>تلفن:</label>
+          <input id='phone' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='تلفن را وارد کنید...' />
+        </div>
+        <!-- Email -->
+        <div>
+          <label class='block text-sm mb-1' for='email'>ایمیل راننده:</label>
+          <input id='email' type='email' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='ایمیل را وارد کنید...' />
+        </div>
+        <!-- Birth date -->
+        <div>
+          <label class='block text-sm mb-1' for='dob'>تاریخ تولد:</label>
+          <input id='dob' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='روز / ماه / سال' />
+        </div>
+        <!-- Military -->
+        <div>
+          <label class='block text-sm mb-1' for='military'>وضعیت نظام‌وظیفه:</label>
+          <select id='military' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black'>
+            <option>انتخاب کنید...</option>
+            <option>پایان خدمت</option>
+            <option>معافیت</option>
+            <option>در حال خدمت</option>
+          </select>
+        </div>
+        <!-- Marital -->
+        <div>
+          <label class='block text-sm mb-1'>وضعیت تأهل:</label>
+          <div class='flex gap-2'>
+            <button type='button' data-toggle-group='marital' class='toggle-option flex-1 py-2 rounded-lg bg-black text-white'>مجرد</button>
+            <button type='button' data-toggle-group='marital' class='toggle-option flex-1 py-2 rounded-lg border border-gray-300'>متاهل</button>
+          </div>
+        </div>
+        <!-- Address -->
+        <div class='md:col-span-2'>
+          <label class='block text-sm mb-1' for='address'>آدرس منزل:</label>
+          <input id='address' class='w-full rounded-lg border-gray-300 focus:border-black focus:ring-black' placeholder='آدرس منزل خود را وارد کنید...' />
+        </div>
+      </form>
+      <!-- Next Button -->
+      <div class='mt-8 flex justify-end'>
+        <button class='flex items-center gap-2 bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition'>
+          بعدی
+          <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' />
+          </svg>
+        </button>
+      </div>
+    </div>
+ 
+    
+  </div>
+
+  <script>
+    document.querySelectorAll('.toggle-option').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var group = this.dataset.toggleGroup;
+        document.querySelectorAll('[data-toggle-group='+group+']').forEach(function(el){
+          el.classList.remove('bg-black','text-white');
+          el.classList.add('border','border-gray-300');
+        });
+        this.classList.add('bg-black','text-white');
+        this.classList.remove('border','border-gray-300');
+      });
+    });
+  </script>
+</body>
+</html>

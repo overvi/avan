@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@import "@splidejs/splide/css";
+
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-SemiBold.woff2") format("woff2");
+}
+
+@theme {
+  --breakpoint-desktop: 49.4375rem;
+
+  --color-gray-300: #f8f8f8;
+}
+
+@layer base {
+  html::-webkit-scrollbar {
+    display: none !important;
+  }
+  html {
+    font-family: "yekan";
+  }
+  body {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .container-w {
+    @apply px-4  xl:px-[6rem];
+  }
+  .fs-normal {
+    font-size: clamp(0.75rem, 0.6962rem + 0.2532vw, 1rem);
+  }
+  .fs-h1 {
+    font-size: clamp(0.875rem, 0.7405rem + 0.6329vw, 1.5rem);
+  }
+  .fs-h2 {
+    font-size: clamp(1rem, 0.9462rem + 0.2532vw, 1.25rem);
+  }
+  .fs-tiny {
+    font-size: clamp(0.75rem, 0.7231rem + 0.1266vw, 0.875rem);
+  }
+
+  .hamburger {
+    @apply size-6 h-3.5 flex flex-col justify-between;
+  }
+
+  .hamburger.toggled span:nth-child(1) {
+    @apply rotate-45 translate-y-[6px];
+  }
+
+  .hamburger.toggled span:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  .hamburger.toggled span:nth-child(3) {
+    @apply -rotate-45 -translate-y-[6px];
+  }
+
+  .hamburger-span {
+    @apply block bg-black rounded-sm transition-all duration-700;
+    height: 2px !important;
+    width: 100% !important;
+  }
+
+  .splide__slide.is-active div {
+    transform: scale(2);
+  }
+
+
+}
