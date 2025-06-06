@@ -3179,41 +3179,5 @@
     </main>
   </body>
   <script src="@assets/js/home.js"></script>
-  <script>
-    function saveScrollPosition() {
-      const scrollPosition = {
-        windowY: window.scrollY,
-        windowX: window.scrollX,
-      };
-
-      localStorage.setItem("scrollPosition", JSON.stringify(scrollPosition));
-      console.log("Saved scroll position:", scrollPosition);
-    }
-
-    function restoreScrollPosition() {
-      try {
-        const savedPosition = JSON.parse(
-          localStorage.getItem("scrollPosition")
-        );
-
-        if (savedPosition) {
-          window.scrollTo(
-            savedPosition.windowX || 0,
-            savedPosition.windowY || 0
-          );
-
-          console.log("Restored scroll position:", savedPosition);
-        }
-      } catch (error) {
-        console.error("Error restoring scroll position:", error);
-      }
-    }
-
-    window.addEventListener("beforeunload", saveScrollPosition);
-    window.addEventListener("load", restoreScrollPosition);
-
-    function createLongPage() {}
-
-    createLongPage();
-  </script>
+  
 </html>
