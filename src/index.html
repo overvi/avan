@@ -31,17 +31,17 @@
             class="flex flex-col gap-4 lg:gap-8 *:relative *:cursor-pointer *:*:cursor-pointer"
           >
             <li>
-              <button>درباره</button>
+              <a href="#about" class="block">درباره</a>
             </li>
             <li>
-              <button>خدمات</button>
+              <a href="#services" class="block">خدمات</a>
             </li>
-            <li><button>معرفی ناوگان</button></li>
+            <li><a href="#navgan" class="block">معرفی ناوگان</a></li>
             <li class="before:!bg-black/50">
-              <button>اخبار</button>
+              <a href="#news" class="block">اخبار</a>
             </li>
-            <li><button>تماس با ما</button></li>
-            <li><button>سوالات متداول</button></li>
+            <li><a href="#contact" class="block">تماس با ما</a></li>
+            <li><a href="#faq" class="block">سوالات متداول</a></li>
           </ul>
         </nav>
       </div>
@@ -64,20 +64,20 @@
             <img width="56" src="@assets/images/logo.avif" alt="logo" />
           </div>
           <ul
-            class="desktop:flex hidden items-center gap-4 lg:gap-8 *:before:absolute *:relative *:before:block *:before:right-0 *:before:left-0 *:before:h-[60%] *:cursor-pointer *:*:cursor-pointer *:before:top-0 *:before:bottom-0 *:before:m-auto *:before:bg-black/35 *:before:blur-[15px] *:*:fs-normal *:before:opacity-0 *:hover:before:opacity-100 *:before:transition-opacity *:before:duration-700 *:before:size-full"
+            class="desktop:flex hidden items-center gap-4 lg:gap-8 *:before:pointer-events-none *:before:absolute *:relative *:before:block *:before:right-0 *:before:left-0 *:before:h-[60%] *:cursor-pointer *:*:cursor-pointer *:before:top-0 *:before:bottom-0 *:before:m-auto *:before:bg-black/35 *:before:blur-[15px] *:*:fs-normal *:before:opacity-0 *:hover:before:opacity-100 *:before:transition-opacity *:before:duration-700 *:before:size-full"
           >
             <li>
-              <button>درباره</button>
+              <a href="#about" class="block">درباره</a>
             </li>
             <li>
-              <button>خدمات</button>
+              <a href="#service" class="block">خدمات</a>
             </li>
-            <li><button>معرفی ناوگان</button></li>
+            <li><a href="#navgan" class="block">معرفی ناوگان</a></li>
             <li class="before:!bg-black/50">
-              <button>اخبار</button>
+              <a href="#news" class="block">اخبار</a>
             </li>
-            <li><button>تماس با ما</button></li>
-            <li><button>سوالات متداول</button></li>
+            <li><a href="#contact" class="block">تماس با ما</a></li>
+            <li><a href="#faq" class="block">سوالات متداول</a></li>
           </ul>
         </div>
         <button
@@ -579,7 +579,7 @@
           <div
             class="flex items-end justify-between gap-12 mt-4 flex-col sm:flex-row"
           >
-            <div class="space-y-6">
+            <div class="space-y-6 *:text-justify">
               <h2 class="fs-h1 font-bold">درباره دات وان سفر</h2>
               <p class="fs-normal">
                 دات‌وان سفر، زیرمجموعه‌ای از گروه دات‌وان، با هدف بازتعریف
@@ -859,7 +859,7 @@
           </div>
         </div>
       </section>
-      <section aria-label="Services" class="container-w mb-40">
+      <section aria-label="Services" id="service" class="container-w mb-40">
         <div class="flex items-center gap-1">
           <span class="size-2 bg-black rounded-full"></span>
           <p class="text-sm font-light">خدمات ما !</p>
@@ -1588,7 +1588,7 @@
         </div>
       </section>
       <div
-        class="container-w gap-2 mx-auto w-fit *:text-nowrap flex  items-center relative z-[0]"
+        class="container-w gap-2 mx-auto w-fit *:text-nowrap flex items-center relative z-[0]"
       >
         <p class="font-bold">از انتخاب تا حرکت</p>
         <div>
@@ -1635,10 +1635,10 @@
         <p class="font-bold">به مقصد، با اطمینان کامل</p>
       </div>
       <div class="relative">
-        <section class="container-w pb-20 mt-40">
+        <section id="navgan" class="container-w pb-20 mt-40">
           <div class="flex items-center gap-1">
             <span class="size-2 bg-black rounded-full"></span>
-            <p class="text-sm font-light">خدمات ما !</p>
+            <p class="text-sm font-light">معرفی ناوگان !</p>
           </div>
           <h2 class="fs-h1 font-bold mt-3.5">​​معرفی ناوگان</h2>
 
@@ -1649,28 +1649,56 @@
             class="splide relative h-[30rem] desktop:h-[62rem] flex items-center justify-center scrollbar-hide"
             aria-label="Navgan"
           >
-           <div  class="splide__arrows *:scale-[1.5] ">
-		<button class="splide__arrow splide__arrow--prev rotate-180 !bg-transparent group">
-		<svg  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="opacity-40 group-hover:opacity-100" d="M10.4133 2.66699H21.5733C26.44 2.66699 29.3333 5.56033 29.3333 10.4137V21.5737C29.3333 26.427 26.44 29.3203 21.5867 29.3203H10.4133C5.55999 29.3337 2.66666 26.4403 2.66666 21.587V10.4137C2.66666 5.56033 5.55999 2.66699 10.4133 2.66699Z" fill="black"/>
-<path class="group-hover:fill-white" d="M7.29333 15.2932L13.0133 9.5732C13.4 9.18654 14.04 9.18654 14.4267 9.5732C14.8133 9.95987 14.8133 10.5999 14.4267 10.9865L10.4133 14.9999H24C24.5467 14.9999 25 15.4532 25 15.9999C25 16.5465 24.5467 16.9999 24 16.9999H10.4133L14.4267 21.0132C14.8133 21.3999 14.8133 22.0399 14.4267 22.4265C14.2267 22.6265 13.9733 22.7199 13.72 22.7199C13.4667 22.7199 13.2133 22.6265 13.0133 22.4265L7.29333 16.7065C7.10667 16.5199 7 16.2665 7 15.9999C7 15.7332 7.10667 15.4799 7.29333 15.2932Z" fill="black"/>
-</svg>
-
-		</button>
-		<button class="splide__arrow splide__arrow--next   !rounded-none rotate-180 !bg-transparent group ">
-		<svg  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="opacity-40 group-hover:opacity-100" d="M10.4133 2.66699H21.5733C26.44 2.66699 29.3333 5.56033 29.3333 10.4137V21.5737C29.3333 26.427 26.44 29.3203 21.5867 29.3203H10.4133C5.55999 29.3337 2.66666 26.4403 2.66666 21.587V10.4137C2.66666 5.56033 5.55999 2.66699 10.4133 2.66699Z" fill="black"/>
-<path class="group-hover:fill-white" d="M7.29333 15.2932L13.0133 9.5732C13.4 9.18654 14.04 9.18654 14.4267 9.5732C14.8133 9.95987 14.8133 10.5999 14.4267 10.9865L10.4133 14.9999H24C24.5467 14.9999 25 15.4532 25 15.9999C25 16.5465 24.5467 16.9999 24 16.9999H10.4133L14.4267 21.0132C14.8133 21.3999 14.8133 22.0399 14.4267 22.4265C14.2267 22.6265 13.9733 22.7199 13.72 22.7199C13.4667 22.7199 13.2133 22.6265 13.0133 22.4265L7.29333 16.7065C7.10667 16.5199 7 16.2665 7 15.9999C7 15.7332 7.10667 15.4799 7.29333 15.2932Z" fill="black"/>
-</svg>
-
-
-		</button>
-  </div>
+          
+            <div class="splide__arrows *:scale-[1.5]">
+              <button
+                class="splide__arrow splide__arrow--prev rotate-180 !bg-transparent group"
+              >
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="opacity-40 group-hover:opacity-100"
+                    d="M10.4133 2.66699H21.5733C26.44 2.66699 29.3333 5.56033 29.3333 10.4137V21.5737C29.3333 26.427 26.44 29.3203 21.5867 29.3203H10.4133C5.55999 29.3337 2.66666 26.4403 2.66666 21.587V10.4137C2.66666 5.56033 5.55999 2.66699 10.4133 2.66699Z"
+                    fill="black"
+                  />
+                  <path
+                    class="group-hover:fill-white"
+                    d="M7.29333 15.2932L13.0133 9.5732C13.4 9.18654 14.04 9.18654 14.4267 9.5732C14.8133 9.95987 14.8133 10.5999 14.4267 10.9865L10.4133 14.9999H24C24.5467 14.9999 25 15.4532 25 15.9999C25 16.5465 24.5467 16.9999 24 16.9999H10.4133L14.4267 21.0132C14.8133 21.3999 14.8133 22.0399 14.4267 22.4265C14.2267 22.6265 13.9733 22.7199 13.72 22.7199C13.4667 22.7199 13.2133 22.6265 13.0133 22.4265L7.29333 16.7065C7.10667 16.5199 7 16.2665 7 15.9999C7 15.7332 7.10667 15.4799 7.29333 15.2932Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+              <button
+                class="splide__arrow splide__arrow--next !rounded-none rotate-180 !bg-transparent group"
+              >
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="opacity-40 group-hover:opacity-100"
+                    d="M10.4133 2.66699H21.5733C26.44 2.66699 29.3333 5.56033 29.3333 10.4137V21.5737C29.3333 26.427 26.44 29.3203 21.5867 29.3203H10.4133C5.55999 29.3337 2.66666 26.4403 2.66666 21.587V10.4137C2.66666 5.56033 5.55999 2.66699 10.4133 2.66699Z"
+                    fill="black"
+                  />
+                  <path
+                    class="group-hover:fill-white"
+                    d="M7.29333 15.2932L13.0133 9.5732C13.4 9.18654 14.04 9.18654 14.4267 9.5732C14.8133 9.95987 14.8133 10.5999 14.4267 10.9865L10.4133 14.9999H24C24.5467 14.9999 25 15.4532 25 15.9999C25 16.5465 24.5467 16.9999 24 16.9999H10.4133L14.4267 21.0132C14.8133 21.3999 14.8133 22.0399 14.4267 22.4265C14.2267 22.6265 13.9733 22.7199 13.72 22.7199C13.4667 22.7199 13.2133 22.6265 13.0133 22.4265L7.29333 16.7065C7.10667 16.5199 7 16.2665 7 15.9999C7 15.7332 7.10667 15.4799 7.29333 15.2932Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </div>
             <div class="splide__track mt-10 !overflow-visible relative mx-8">
-              <ul class="splide__list">
-                <li class="splide__slide group relative">
-                  <div
-                    class="absolute hidden sm:flex z-[2]  items-center justify-center scale-[.7] group-[.is-active]:opacity-100 opacity-0 m-auto inset-0 -right-20"
+                <div
+                    class="absolute hidden sm:flex z-[2] items-center justify-center scale-[1] opacity-100 m-auto inset-0 -right-20"
                   >
                     <svg
                       width="802"
@@ -1702,6 +1730,9 @@
                       />
                     </svg>
                   </div>
+              <ul class="splide__list">
+                <li class="splide__slide group relative">
+                
                   <div class="scale-[.5]">
                     <img src="@assets/images/navgan-one.jpg" alt="" />
                     <p
@@ -1712,39 +1743,8 @@
                   </div>
                 </li>
                 <li class="splide__slide group relative overflow-visible">
-                  <div
-                    class="absolute z-[2] hidden sm:flex items-center justify-center scale-[.7] group-[.is-active]:opacity-100 opacity-0 m-auto inset-0 -right-20"
-                  >
-                    <svg
-                      width="802"
-                      height="802"
-                      viewBox="0 0 802 802"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="401"
-                        cy="401"
-                        r="323"
-                        fill="black"
-                        fill-opacity="0.02"
-                      />
-                      <circle
-                        cx="401"
-                        cy="401"
-                        r="234"
-                        fill="black"
-                        fill-opacity="0.02"
-                      />
-                      <circle
-                        cx="401"
-                        cy="401"
-                        r="401"
-                        fill="black"
-                        fill-opacity="0.01"
-                      />
-                    </svg>
-                  </div>
+               
+                  
                   <div class="scale-[.5]">
                     <img src="@assets/images/navgan-one.jpg" alt="" />
                     <p
@@ -1755,39 +1755,8 @@
                   </div>
                 </li>
                 <li class="splide__slide group relative">
-                  <div
-                    class="absolute z-[2] hidden sm:flex items-center justify-center scale-[.7] group-[.is-active]:opacity-100 opacity-0 m-auto inset-0 -right-20"
-                  >
-                    <svg
-                      width="802"
-                      height="802"
-                      viewBox="0 0 802 802"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="401"
-                        cy="401"
-                        r="323"
-                        fill="black"
-                        fill-opacity="0.02"
-                      />
-                      <circle
-                        cx="401"
-                        cy="401"
-                        r="234"
-                        fill="black"
-                        fill-opacity="0.02"
-                      />
-                      <circle
-                        cx="401"
-                        cy="401"
-                        r="401"
-                        fill="black"
-                        fill-opacity="0.01"
-                      />
-                    </svg>
-                  </div>
+                 
+                  
                   <div class="scale-[.5]">
                     <img src="@assets/images/navgan-one.jpg" alt="" />
                     <p
@@ -1803,24 +1772,16 @@
         </section>
       </div>
 
-      <section class="container-w mx-auto px-4 py-8" dir="rtl">
+      <section class="container-w mx-auto px-4 py-8" dir="rtl" id="news">
         <div class="flex flex-col md:flex-row gap-8">
-          <!-- ================================
-         LEFT COLUMN: “اخبار دات وان سفر”
-         ================================ -->
 
-          <!-- ================================
-         RIGHT COLUMN: IMAGE + OVERLAPPING WHITE CARD
-         ================================ -->
           <div class="md:w-1/2 relative flex justify-center md:justify-end">
-            <!-- Replace the `src` with your real image path -->
             <img
               src="@assets/images/news-images.png"
               alt="سرویس ترانسفر فرودگاهی"
-              class="w-full h-auto object-cover rounded-[1.5rem] "
+              class="w-full h-auto object-cover rounded-[1.5rem]"
             />
 
-            <!-- White card that overlaps the bottom of the image -->
             <div
               class="absolute bottom-0 right-0 left-0 mx-auto md:left-0 md:right-0 bg-[#F8F8F8] rounded-[1.5rem] p-6 transform translate-y-1/2 max-w-[80%]"
             >
@@ -1829,9 +1790,11 @@
                 این سرویس، امکان جا‌به‌جایی مسافران هوایی از درب منزل تا فرودگاه
                 و بالعکس فراهم می‌آورد.
               </p>
-              <div class="flex items-center gap-2  flex-col sm:flex-row justify-between text-sm">
+              <div
+                class="flex items-center gap-2 flex-col sm:flex-row justify-between text-sm"
+              >
                 <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                <a href="#" class="flex items-center gap-2">
+                <a href="#" class="flex items-center outline-offset-5 hover:outline-black hover:outline px-2  rounded-[.375rem] gap-2">
                   بیشتر بخوانید
                   <svg
                     width="24"
@@ -1878,10 +1841,8 @@
               </svg>
             </div>
 
-            <!-- Section Title -->
             <h2 class="text-2xl font-bold mb-6">اخبار دات وان سفر</h2>
 
-            <!-- List of three items -->
             <div class="space-y-6">
               <div class="p-4 border-b border-b-[#E1E1E1] pb-4">
                 <h3 class="font-bold mb-2">سرویس ترانسفر فرودگاهی</h3>
@@ -1891,7 +1852,7 @@
                 </p>
                 <div class="flex items-center justify-between text-sm">
                   <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                  <a href="#" class="flex items-center gap-2">
+                  <a href="#" class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2  rounded-[.375rem]">
                     بیشتر بخوانید
                     <svg
                       width="24"
@@ -1921,7 +1882,7 @@
                 </p>
                 <div class="flex items-center justify-between text-sm">
                   <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                  <a href="#" class="flex items-center gap-2">
+                  <a href="#" class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2  rounded-[.375rem]">
                     بیشتر بخوانید
                     <svg
                       width="24"
@@ -1951,7 +1912,7 @@
                 </p>
                 <div class="flex items-center justify-between text-sm">
                   <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                  <a href="#" class="flex items-center gap-2">
+                  <a href="#" class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2  rounded-[.375rem]">
                     بیشتر بخوانید
                     <svg
                       width="24"
@@ -1978,7 +1939,7 @@
         </div>
       </section>
 
-      <section class="container-w mx-auto px-4 py-8 mt-40" dir="rtl">
+      <section class="container-w mx-auto px-4 py-8 mt-40" dir="rtl" id="contact">
         <div class="flex flex-col md:flex-row gap-8">
           <div class="md:w-1/2 flex flex-col">
             <!-- “! با ما در ارتباط باشید” + bullet -->
@@ -2301,7 +2262,7 @@
           <div class="md:w-1/2 bg-[#F8F8F8] rounded-3xl p-6">
             <h3 class="font-bold my-8 text-center">فرم ارتباط با ما</h3>
 
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col xl:flex-row gap-4">
               <div class="flex flex-col flex-1 text-right">
                 <label class="mb-1 text-sm font-medium">نام:</label>
                 <input
@@ -2381,10 +2342,10 @@
           </div>
         </div>
       </section>
-      <section class="container-w mx-auto px-4 py-8">
-        <div class="flex  items-center mb-6">
-          <span class=" text-lg ml-2">●</span>
-          <span class=" text-sm">ما را بیشتر بشناسید!</span>
+      <section class="container-w mx-auto px-4 py-8" id="faq">
+        <div class="flex items-center mb-6">
+          <span class="text-lg ml-2">●</span>
+          <span class="text-sm">ما را بیشتر بشناسید!</span>
         </div>
         <h2 class="text-2xl font-bold mb-8 text-right">سوالات متداول</h2>
 
@@ -2454,11 +2415,11 @@
                 با استفاده از طراحان گرافیک است.
               </div>
             </div>
-            <div class="bg-[#F8F8F8] rounded-[.875rem] overflow-hidden group">
+            <div class="bg-[#F8F8F8] is-expanded rounded-[.875rem] overflow-hidden group">
               <button
-                class="w-full flex justify-between rounded-[.875rem] group-[.is-expanded]:border items-center bg-[#F8F8F8] px-4 py-4 text-right focus:outline-none"
+                class="w-full flex  justify-between rounded-[.875rem] group-[.is-expanded]:border items-center bg-[#F8F8F8] px-4 py-4 text-right focus:outline-none"
                 type="button"
-                aria-expanded="false"
+                aria-expanded="true"
                 data-accordion-target="faq2"
               >
                 <span class="font-bold"
@@ -2504,7 +2465,7 @@
                   </svg>
                 </span>
               </button>
-              <div id="faq2" class="px-4 py-4 text-sm hidden">
+              <div id="faq2" class="px-4 py-4 text-sm ">
                 متن لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
                 با استفاده از طراحان گرافیک است.
               </div>
@@ -2628,18 +2589,21 @@
       </section>
       <section class="container-w mx-auto px-4 py-8 mt-30">
         <div
-          class="relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg"
+          class="relative bg-[#F8F8F8] z-0 rounded-[2.5rem] overflow-hidden shadow-lg"
         >
+      
           <div
-            class="absolute top-0 left-0 w-64 h-64 bg-gray-100 rounded-full opacity-50 -translate-x-1/3 -translate-y-1/3"
-          ></div>
-          <div
-            class="absolute bottom-0 right-0 w-64 h-64 bg-gray-100 rounded-full opacity-50 translate-x-1/3 translate-y-1/3"
-          ></div>
 
-          <div
-            class="relative bg-[37%] desktop:bg-center flex flex-col min-h-200 bg-[url(../images/cta.png)] md:flex-row items-center gap-6 p-6"
+            class="relative bg-[37%] desktop:bg-left bg-no-repeat flex flex-col min-h-140 bg-[url(../images/cta.png)]   md:flex-row items-center gap-6 p-6"
           >
+          <div class="absolute bottom-0 right-0 -z-[1]">
+            <svg width="401" height="367" viewBox="0 0 401 367" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="294.5" cy="294.5" r="294.5" fill="black" fill-opacity="0.02"/>
+<circle cx="294.5" cy="294.5" r="212.5" fill="black" fill-opacity="0.02"/>
+<ellipse cx="294.5" cy="294" rx="129.5" ry="129" fill="black" fill-opacity="0.03"/>
+</svg>
+
+          </div>
             <div
               class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-right space-y-4"
             >
@@ -3016,30 +2980,33 @@
 
         <footer class="mt-12 pt-6">
           <p class="font-bold w-fit mx-auto mb-4">دسترسی سریع</p>
-          <div class="flex flex-wrap justify-center gap-6 text-black mb-6">
-            <a href="#" class="hover:text-black transition">درباره</a>
-            <a href="#" class="hover:text-black transition">خدمات</a>
-            <a href="#" class="hover:text-black transition">معرفی ناوگان</a>
-            <a href="#" class="hover:text-black transition">اخبار</a>
-            <a href="#" class="hover:text-black transition">تماس با ما</a>
-            <a href="#" class="hover:text-black transition">سوالات متداول</a>
-          </div>
+          <ul class="flex flex-wrap justify-center gap-6 text-black mb-6 *:before:pointer-events-none *:before:absolute *:relative *:before:block *:before:right-0 *:before:left-0 *:before:h-[60%] *:cursor-pointer *:*:cursor-pointer *:before:top-0 *:before:bottom-0 *:before:m-auto *:before:bg-black/35 *:before:blur-[15px] *:*:fs-normal *:before:opacity-0 *:hover:before:opacity-100 *:before:transition-opacity *:before:duration-700 *:before:size-full">
+          <li>
+              <a href="#about" class="block">درباره</a>
+            </li>
+            <li>
+              <a href="#services" class="block">خدمات</a>
+            </li>
+            <li><a href="#navgan" class="block">معرفی ناوگان</a></li>
+            <li class="before:!bg-black/50">
+              <a href="#news" class="block">اخبار</a>
+            </li>
+            <li><a href="#contact" class="block">تماس با ما</a></li>
+            <li><a href="#faq" class="block">سوالات متداول</a></li>
+          </ul>
 
           <div class="relative">
             <div class="absolute inset-0 m-auto w-fit top-5 -z-[1]">
               <svg
                 width="100%"
                 height="2"
-                viewBox="0 0 1248 2"
+                viewBox="0 0 1948 2"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M780 1L1248 0.999959"
-                  stroke="#E1E1E1"
-                  stroke-linejoin="round"
-                />
-                <path d="M0 1H468" stroke="#E1E1E1" stroke-linejoin="round" />
+          <path d="M0 1H780" stroke="#E1E1E1" stroke-linejoin="round" />
+<path d="M1140 1H1920" stroke="#E1E1E1" stroke-linejoin="round" />
+
               </svg>
             </div>
 
@@ -3168,7 +3135,9 @@
               </a>
             </div>
           </div>
-          <div class="flex items-center justify-between mt-4 flex-col text-center sm:flex-row sm:text-right">
+          <div
+            class="flex items-center justify-between mt-4 flex-col text-center sm:flex-row sm:text-right"
+          >
             <p class="font-light text-sm">
               تمامی حقوق این سایت متعلق به شرکت آوان سفر می‌باشد.
             </p>
@@ -3179,5 +3148,4 @@
     </main>
   </body>
   <script src="@assets/js/home.js"></script>
-  
 </html>

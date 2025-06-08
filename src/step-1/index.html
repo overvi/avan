@@ -19,18 +19,16 @@
         class="hidden rounded-[2.5rem] md:flex w-1/2 relative overflow-hidden h-fit xl:h-auto rounded-r-3xl bg-gray-50"
       >
         <div
-          class=" inset-0 xl:absolute flex items-end xl:items-start justify-end flex-col xl:justify-start pt-10 "
+          class="inset-0 xl:absolute flex items-end xl:items-start justify-end flex-col xl:justify-start pt-10"
         >
-        <div class="px-8 ps-14 ">
-
-          <div >
-           <img width="100" src="@assets/images/logo.png" alt="">
+          <div class="px-8 ps-14">
+            <div>
+              <img width="100" src="@assets/images/logo.png" alt="" />
+            </div>
+            <h3 class="text-[2rem] mt-8">سفر هوشمند، با دات وان سفر</h3>
           </div>
-           <h3 class="text-[2rem] mt-8 ">سفر هوشمند، با دات وان سفر</h3>
-           
-        </div>
-          <div class="w-full" >
-            <img class="w-full" src="@assets/images/form-bg.png" alt="">
+          <div class="w-full">
+            <img class="w-full" src="@assets/images/form-bg.png" alt="" />
           </div>
         </div>
       </div>
@@ -48,8 +46,10 @@
           </div>
         </div>
 
-        <div class="flex items-start min-[1400px]:items-center gap-4 min-[1400px]:gap-0 text-sm mb-6 relative flex-col min-[1400px]:flex-row justify-between">
-          <div class="flex items-center gap-2">
+        <div
+          class="flex items-start lg:items-center gap-4 min-[1400px]:gap-4 text-sm mb-6 relative flex-col lg:flex-row justify-between"
+        >
+          <div class="flex items-center gap-2 text-nowrap">
             <span
               class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-white"
               >۱</span
@@ -59,9 +59,9 @@
           <span
             class="h-0.5 w-42 border border-black/40 border-dashed hidden md:inline-block"
           ></span>
-          <div class="flex items-center gap-2 text-gray-400">
+          <div class="flex items-center text-nowrap gap-2 text-gray-400">
             <span
-              class="w-6 h-6 flex items-center bg-[#7c7c7c] text-white justify-center rounded-full "
+              class="w-6 h-6 flex items-center bg-[#7c7c7c] text-white justify-center rounded-full"
               >۲</span
             >
             مدارک
@@ -69,9 +69,9 @@
           <span
             class="h-0.5 w-42 border border-black/40 border-dashed hidden md:inline-block"
           ></span>
-          <div class="flex items-center gap-2 text-gray-400">
+          <div class="flex items-center text-nowrap gap-2 text-gray-400">
             <span
-              class="w-6 h-6 flex items-center justify-center text-white bg-[#7c7c7c] rounded-full "
+              class="w-6 h-6 flex items-center justify-center text-white bg-[#7c7c7c] rounded-full"
               >۳</span
             >
             سوابق شغلی و مهارت‌ها
@@ -159,18 +159,47 @@
           <!-- Birth date -->
           <div class="flex flex-col flex-1 text-right">
             <label class="mb-1 text-sm font-medium">تاریخ تولد:</label>
-            <input
+
+            <div
+              class="datepicker-wrapper group relative bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
+            >
+              <div class="absolute pointer-events-none left-3 bottom-3">
+                <svg
+                  class="select-icon duration-500 transition-transform"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.9396 6.71094L10.0496 11.6009C9.47207 12.1784 8.52707 12.1784 7.94957 11.6009L3.05957 6.71094"
+                    stroke="#292D32"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="text-input group-[.init]:text-black text-[#CFCFCF]">
+                روز / ماه / سال
+              </div>
+              <input type="date" class="datepicker-input has-arrow" />
+            </div>
+            <!-- <input
               type="date"
               placeholder="نام خود را وارد کنید..."
               class="bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
-            />
+            /> -->
           </div>
           <!-- Military -->
           <div class="flex flex-col relative flex-1 text-right">
             <label class="block text-sm mb-1">وضعیت نظام وظیفه(آقایان)</label>
 
-            <div class="absolute left-3 bottom-3">
+            <div class="absolute pointer-events-none left-3 bottom-3">
               <svg
+                class="select-icon duration-500 transition-transform"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -189,7 +218,7 @@
             </div>
             <select
               style="appearance: none"
-              class="bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
+              class="bg-white has-arrow rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
             >
               <option value="" selected disabled>انتخاب کنید...</option>
               <option class="text-black" value="">1</option>
@@ -228,8 +257,8 @@
 
         <div class="mt-18 flex justify-between">
           <button
-          disabled
-            class="flex items-center disabled:text-black/50 group fs-normal hover:text-white cursor-pointer transition-colors duration-700 outline  gap-2 bg-white rounded-[.875rem] text-black py-[.5em] px-3.5"
+            disabled
+            class="flex items-center disabled:text-black/50 group fs-normal hover:text-white cursor-pointer transition-colors duration-700 outline gap-2 bg-white rounded-[.875rem] text-black py-[.5em] px-3.5"
           >
             <div>
               <svg
@@ -252,7 +281,8 @@
             </div>
             <p>قبلی</p>
           </button>
-          <a href="/step-2"
+          <a
+            href="/step-2"
             class="flex items-center group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-3.5"
           >
             <p>بعدی</p>
@@ -281,20 +311,7 @@
       </div>
     </div>
 
-    <script>
-      document.querySelectorAll(".toggle-option").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var group = this.dataset.toggleGroup;
-          document
-            .querySelectorAll("[data-toggle-group=" + group + "]")
-            .forEach(function (el) {
-              el.classList.remove("bg-black", "text-white");
-              el.classList.add("border", "border-gray-300");
-            });
-          this.classList.add("bg-black", "text-white");
-          this.classList.remove("border", "border-gray-300");
-        });
-      });
-    </script>
+    <script src="@assets/js/form.js"></script>
+    <script src="@assets/js/dp.js"></script>
   </body>
 </html>

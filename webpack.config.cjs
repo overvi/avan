@@ -6,16 +6,18 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: {
     home: "./src/assets/js/home.js",
+    form: "./src/assets/js/form.js",
   },
 
   plugins: [
     new HtmlBundlerPlugin({
       entry: {
         "/index": "./src/index.html",
-        "/step-1/index" : "./src/step-1/index.html",
-        "/step-2/index" : "./src/step-2/index.html",
-        "/step-3/index" : "./src/step-3/index.html",
-        "/confirm/index" : "./src/confirm/index.html"
+        "/step-1/index": "./src/step-1/index.html",
+        "/step-2/index": "./src/step-2/index.html",
+        "/step-3/index": "./src/step-3/index.html",
+        "/confirm/index": "./src/confirm/index.html",
+        "/isolation/index": "./src/isolation/index.html",
       },
       js: {
         filename: "js/[name].[contenthash:8].js",

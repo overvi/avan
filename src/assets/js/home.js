@@ -94,34 +94,38 @@ new Splide(".splide", {
   padding: { right: "15%", left: "15%" },
   pagination: false,
   mediaQuery: "min",
-  arrows : false,
+  arrows: false,
   perPage: 1,
   focus: "center",
   breakpoints: {
     768: {
       padding: { right: "30%", left: "30%" },
       perPage: 1,
-      arrows : true
+      arrows: true,
     },
   },
 }).mount();
 
 document.addEventListener("DOMContentLoaded", function () {
   const accordionButtons = document.querySelectorAll("[data-accordion-target]");
-
   accordionButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const contentId = btn.getAttribute("data-accordion-target");
       const contentEl = document.getElementById(contentId);
       const isExpanded = btn.getAttribute("aria-expanded") === "true";
 
-      btn.setAttribute("aria-expanded", isExpanded ? "false" : "true");
-      btn.parentElement.classList.toggle("is-expanded")
+      accordionButtons.forEach((otherBtn) => {
+        const otherContentId = otherBtn.getAttribute("data-accordion-target");
+        const otherContentEl = document.getElementById(otherContentId);
 
+        otherBtn.setAttribute("aria-expanded", "false");
+        otherBtn.parentElement.classList.remove("is-expanded");
+        otherContentEl.classList.add("hidden");
+      });
 
-      if (isExpanded) {
-        contentEl.classList.add("hidden");
-      } else {
+      if (!isExpanded) {
+        btn.setAttribute("aria-expanded", "true");
+        btn.parentElement.classList.add("is-expanded");
         contentEl.classList.remove("hidden");
       }
     });

@@ -19,18 +19,16 @@
         class="hidden rounded-[2.5rem] md:flex w-1/2 relative overflow-hidden h-fit xl:h-auto rounded-r-3xl bg-gray-50"
       >
         <div
-          class=" inset-0 xl:absolute flex items-end xl:items-start justify-end flex-col xl:justify-start pt-10 "
+          class="inset-0 xl:absolute flex items-end xl:items-start justify-end flex-col xl:justify-start pt-10"
         >
-        <div class="px-8 ps-14 ">
-
-          <div >
-           <img width="100" src="@assets/images/logo.png" alt="">
+          <div class="px-8 ps-14">
+            <div>
+              <img width="100" src="@assets/images/logo.png" alt="" />
+            </div>
+            <h3 class="text-[2rem] mt-8">سفر هوشمند، با دات وان سفر</h3>
           </div>
-           <h3 class="text-[2rem] mt-8 ">سفر هوشمند، با دات وان سفر</h3>
-           
-        </div>
-          <div class="w-full" >
-            <img class="w-full" src="@assets/images/form-bg.png" alt="">
+          <div class="w-full">
+            <img class="w-full" src="@assets/images/form-bg.png" alt="" />
           </div>
         </div>
       </div>
@@ -48,24 +46,39 @@
           </div>
         </div>
 
-        <div class="flex items-start min-[1400px]:items-center gap-4 min-[1400px]:gap-0 text-sm mb-6 relative flex-col min-[1400px]:flex-row justify-between">
-          <div class="flex items-center gap-2">
-          <div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="12" cy="12" r="12" fill="black"/>
-<path opacity="0.4" d="M12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5Z" fill="white" stroke="white"/>
-<path d="M10.9351 14.6842C10.7851 14.6842 10.6426 14.6242 10.5376 14.5192L8.41508 12.3967C8.19758 12.1792 8.19758 11.8192 8.41508 11.6017C8.63258 11.3842 8.99258 11.3842 9.21008 11.6017L10.9351 13.3267L14.7901 9.47172C15.0076 9.25422 15.3676 9.25422 15.5851 9.47172C15.8026 9.68922 15.8026 10.0492 15.5851 10.2667L11.3326 14.5192C11.2276 14.6242 11.0851 14.6842 10.9351 14.6842Z" fill="white"/>
-</svg>
-
-          </div>
+        <div
+          class="flex items-start lg:items-center gap-4 text-sm mb-6 relative flex-col lg:flex-row justify-between"
+        >
+          <div class="flex text-nowrap items-center gap-2">
+            <div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="black" />
+                <path
+                  opacity="0.4"
+                  d="M12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5Z"
+                  fill="white"
+                  stroke="white"
+                />
+                <path
+                  d="M10.9351 14.6842C10.7851 14.6842 10.6426 14.6242 10.5376 14.5192L8.41508 12.3967C8.19758 12.1792 8.19758 11.8192 8.41508 11.6017C8.63258 11.3842 8.99258 11.3842 9.21008 11.6017L10.9351 13.3267L14.7901 9.47172C15.0076 9.25422 15.3676 9.25422 15.5851 9.47172C15.8026 9.68922 15.8026 10.0492 15.5851 10.2667L11.3326 14.5192C11.2276 14.6242 11.0851 14.6842 10.9351 14.6842Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
             اطلاعات هویتی
           </div>
           <span
             class="h-0.5 w-42 border border-black/40 border-dashed hidden md:inline-block"
           ></span>
-          <div class="flex items-center gap-2 text-black">
+          <div class="flex text-nowrap items-center gap-2 text-black">
             <span
-              class="w-6 h-6 flex items-center bg-black text-white justify-center rounded-full "
+              class="w-6 h-6 flex items-center bg-black text-white justify-center rounded-full"
               >۲</span
             >
             مدارک
@@ -73,9 +86,9 @@
           <span
             class="h-0.5 w-42 border border-black/40 border-dashed hidden md:inline-block"
           ></span>
-          <div class="flex items-center gap-2 text-gray-400">
+          <div class="flex text-nowrap items-center gap-2 text-gray-400">
             <span
-              class="w-6 h-6 flex items-center justify-center text-white bg-[#7c7c7c] rounded-full "
+              class="w-6 h-6 flex items-center justify-center text-white bg-[#7c7c7c] rounded-full"
               >۳</span
             >
             سوابق شغلی و مهارت‌ها
@@ -87,13 +100,11 @@
         </div>
 
         <form class="flex-col flex xl:grid xl:grid-cols-3 gap-4 gap-y-6">
-        
- 
-        
           <div class="flex flex-col relative flex-1 text-right">
             <label class="block text-sm mb-1">اخرین مدرک تحصیلی:</label>
             <div class="absolute left-3 bottom-3">
               <svg
+                class="select-icon transition-transform duration-500"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -112,16 +123,14 @@
             </div>
             <select
               style="appearance: none"
-              class="bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
+              class="bg-white has-arrow rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
             >
               <option value="" selected disabled>انتخاب کنید...</option>
               <option class="text-black" value="">1</option>
             </select>
           </div>
 
-          
-    
-          <div class="flex flex-col flex-1 text-right ">
+          <div class="flex flex-col flex-1 text-right">
             <label class="mb-1 text-sm font-medium w-full">رشته تحصیلی:</label>
             <input
               type="text"
@@ -130,13 +139,45 @@
             />
           </div>
           <div class="flex flex-col flex-1 text-right">
-            <label class="mb-1 text-sm font-medium">تاریخ اخذ مدرک (اختیاری):</label>
-            <input type="date" placeholder="نام خود را وارد کنید..." class="bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none">
+            <label class="mb-1 text-sm font-medium"
+              >تاریخ اخذ مدرک (اختیاری):</label
+            >
+
+            <div
+              class="datepicker-wrapper group relative bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
+            >
+              <div class="absolute pointer-events-none left-3 bottom-3">
+                <svg
+                  class="select-icon duration-500 transition-transform"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.9396 6.71094L10.0496 11.6009C9.47207 12.1784 8.52707 12.1784 7.94957 11.6009L3.05957 6.71094"
+                    stroke="#292D32"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="text-input group-[.init]:text-black text-[#CFCFCF]">
+                روز / ماه / سال
+              </div>
+              <input type="date" class="datepicker-input has-arrow" />
+            </div>
           </div>
-            <div class="flex flex-col relative flex-1 text-right">
-            <label class="block text-sm mb-1">میزان تسلط به زبان انگلیسی:</label>
+          <div class="flex flex-col relative flex-1 text-right">
+            <label class="block text-sm mb-1"
+              >میزان تسلط به زبان انگلیسی:</label
+            >
             <div class="absolute left-3 bottom-3">
               <svg
+                class="select-icon duration-500 transition-transform"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -155,19 +196,18 @@
             </div>
             <select
               style="appearance: none"
-              class="bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
+              class="bg-white has-arrow rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
             >
               <option value="" selected disabled>انتخاب کنید...</option>
               <option class="text-black" value="">1</option>
             </select>
           </div>
-
         </form>
 
         <div class="desktop:pt-63 pt-10 flex justify-between">
           <a
-          href="/step-1"
-            class="flex items-center  group fs-normal  cursor-pointer transition-colors duration-700 outline  gap-2 bg-white rounded-[.875rem] text-black py-[.5em] px-3.5"
+            href="/step-1"
+            class="flex items-center group fs-normal cursor-pointer transition-colors duration-700 outline gap-2 bg-white rounded-[.875rem] text-black py-[.5em] px-3.5"
           >
             <div>
               <svg
@@ -189,8 +229,9 @@
               </svg>
             </div>
             <p>قبلی</p>
-        </a> 
-          <a href="/step-3"
+          </a>
+          <a
+            href="/step-3"
             class="flex items-center group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-3.5"
           >
             <p>بعدی</p>
@@ -214,25 +255,12 @@
                 />
               </svg>
             </div>
-        </a>
+          </a>
         </div>
       </div>
     </div>
 
-    <script>
-      document.querySelectorAll(".toggle-option").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var group = this.dataset.toggleGroup;
-          document
-            .querySelectorAll("[data-toggle-group=" + group + "]")
-            .forEach(function (el) {
-              el.classList.remove("bg-black", "text-white");
-              el.classList.add("border", "border-gray-300");
-            });
-          this.classList.add("bg-black", "text-white");
-          this.classList.remove("border", "border-gray-300");
-        });
-      });
-    </script>
+    <script src="@assets/js/form.js"></script>
+    <script src="@assets/js/dp.js"></script>
   </body>
 </html>
