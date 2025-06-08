@@ -2,7 +2,17 @@ const selects = document.querySelectorAll(".has-arrow");
 const toggleOptions = document.querySelectorAll(".toggle-option");
 
 selects.forEach((select) => {
-  select.addEventListener("click", () => {
+  select.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    selects.forEach((otherSelect) => {
+      if (otherSelect !== select) {
+        otherSelect.parentElement
+          .querySelector(".select-icon")
+          .classList.remove("rotate-180");
+      }
+    });
+
     select.parentElement
       .querySelector(".select-icon")
       .classList.toggle("rotate-180");
