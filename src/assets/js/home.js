@@ -135,10 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const entryTl = gsap.timeline({});
 
 entryTl
-  .from("nav", {
-    y: -500,
-    duration: 0.5,
-  })
+
   .from(".hero", {
     opacity: 0,
     duration: 0.5,

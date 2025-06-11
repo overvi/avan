@@ -17,7 +17,6 @@ module.exports = {
         "/step-2/index": "./src/step-2/index.html",
         "/step-3/index": "./src/step-3/index.html",
         "/confirm/index": "./src/confirm/index.html",
-        "/isolation/index": "./src/isolation/index.html",
       },
       js: {
         filename: "js/[name].[contenthash:8].js",
