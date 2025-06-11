@@ -60,6 +60,9 @@
   select:has(:disabled:checked) {
     color: #cfcfcf;
   }
+  button , select {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {
