@@ -391,7 +391,6 @@ serviceTl
   )
   .from(".about-video", {
     y: 200,
-    opacity: 0,
   });
 
 footerTl
