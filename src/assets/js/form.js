@@ -1,9 +1,11 @@
+import DatePicker from "../../../lib/datepicker.esm";
+import "../../../lib/datepicker.css";
+
 const selects = document.querySelectorAll(".has-arrow");
 const toggleOptions = document.querySelectorAll(".toggle-option");
 
 selects.forEach((select) => {
   select.addEventListener("click", (e) => {
-    e.stopPropagation();
 
     selects.forEach((otherSelect) => {
       if (otherSelect !== select) {
@@ -20,7 +22,7 @@ selects.forEach((select) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.closest(".has-arrow")) return;
+  if (e.target.closest(".has-arrow , .date_picker_calendar")) return;
   selects.forEach((select) => {
     select.parentElement
       .querySelector(".select-icon")
@@ -43,3 +45,21 @@ if (toggleOptions.length) {
     });
   });
 }
+
+document.addEventListener("click", (event) => {
+  document.querySelectorAll(".dp").forEach((picker) => {
+    const input = picker.querySelector(".date");
+    const calendar = picker.querySelector(".date_picker_calendar");
+
+    if (input.contains(event.target)) {
+      document.querySelectorAll(".date_picker_calendar").forEach((cal) => {
+        if (cal !== calendar) cal.classList.add("hidden");
+      });
+      calendar.classList.toggle("hidden");
+      picker.classList.toggle("open");
+    } else if (!picker.contains(event.target)) {
+      calendar.classList.add("hidden");
+      picker.classList.remove("open");
+    }
+  });
+});

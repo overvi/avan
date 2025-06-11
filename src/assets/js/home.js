@@ -131,3 +131,289 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const entryTl = gsap.timeline({});
+
+entryTl
+  .from("nav", {
+    y: -500,
+    duration: 0.5,
+  })
+  .from(".hero", {
+    opacity: 0,
+    duration: 0.5,
+  })
+  .from(".download", {
+    opacity: 0,
+    duration: 0.5,
+  });
+
+const policyTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".policy",
+    start: "top 70%",
+  },
+});
+const aboutTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top 70%",
+  },
+});
+const newsTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".news",
+    start: "top 70%",
+  },
+});
+const contactTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "top 70%",
+  },
+});
+const faqTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".faq",
+    start: "top 70%",
+  },
+});
+const footerTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "footer",
+    start: "top 70%",
+  },
+});
+
+const linesTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".lines",
+    start: "top 70%",
+  },
+});
+const navgan = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".navgan",
+    start: "top 10%",
+  },
+});
+const avanSafar = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".avan-safar",
+    start: "top 70%",
+  },
+});
+const serviceTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".service",
+    start: "top 70%",
+  },
+});
+const midTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".mid",
+    start: "top 70%",
+  },
+});
+
+policyTl
+  .from(
+    ".policy-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+    "0"
+  )
+  .from(
+    ".policy-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  );
+newsTl
+  .from(
+    ".news-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+    "0"
+  )
+  .from(
+    ".news-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  );
+faqTl
+  .from(
+    ".faq-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+    "0"
+  )
+  .from(
+    ".faq-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  );
+contactTl
+  .from(
+    ".contact-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+    "0"
+  )
+  .from(
+    ".contact-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  );
+linesTl
+  .from(
+    ".lines-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+    "0"
+  )
+  .from(
+    ".lines-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  );
+aboutTl
+  .from(
+    ".about-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+
+    "0"
+  )
+  .from(
+    ".about-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  )
+  .from(
+    ".about-video",
+    {
+      y: 200,
+      opacity: 0,
+    },
+    "0"
+  );
+avanSafar.from(
+  ".avan-safar",
+  {
+    y: -100,
+    opacity: 0,
+    duration: 1.5,
+  },
+
+  "0"
+);
+
+const mm = gsap.matchMedia();
+
+mm.add("(max-width: 767px)", () => {
+
+  gsap.fromTo(
+    ".avan-safar-svg",
+    { width: "4rem" }, 
+    { duration: 1.5, width: "100%" },
+    0
+  );
+});
+
+mm.add("(min-width: 768px)", () => {
+
+  gsap.fromTo(
+    ".avan-safar-svg",
+    { width: "16rem" }, 
+    { duration: 1.5, width: "auto" },
+    0
+  );
+});
+
+navgan.from(
+  ".navgan",
+  {
+    y: -600,
+    opacity: 0,
+    duration: 1.5,
+  },
+
+  "0"
+);
+
+serviceTl
+  .from(
+    ".service-right",
+    {
+      x: 500,
+      opacity: 0,
+    },
+
+    "0"
+  )
+  .from(
+    ".service-left",
+    {
+      opacity: 0,
+      x: -500,
+    },
+    "0"
+  )
+  .from(".about-video", {
+    y: 200,
+    opacity: 0,
+  });
+
+footerTl
+  .from(
+    ".footer-top",
+    {
+      y: -200,
+      opacity: 0,
+    },
+
+    "0"
+  )
+  .from(
+    ".footer-bottom",
+    {
+      opacity: 0,
+      y: -200,
+    },
+    "0"
+  );
+
+midTl.from(".mid", {
+  opacity: 0,
+  duration: 0.5,
+});

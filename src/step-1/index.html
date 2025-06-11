@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="pb-10">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,18 +16,21 @@
   <body class="bg-white flex justify-center items-center min-h-screen">
     <div class="gap-6 flex flex-col md:flex-row max-w-[110rem] w-full m-6">
       <div
-        class="hidden bg-[url(../images/form-bg.png)] bg-no-repeat bg-cover bg-position-[50%] rounded-[2.5rem] z-0 md:flex w-1/2 relative overflow-hidden h-[55rem] xl:h-auto rounded-r-3xl "
+        class="hidden bg-[url(../images/form-bg.png)] bg-no-repeat bg-cover bg-position-[50%] rounded-[2.5rem] z-0 md:flex w-1/2 relative overflow-hidden h-[55rem] xl:h-auto rounded-r-3xl"
       >
         <div
-          class="inset-0 xl:absolute  w-full flex items-end xl:items-start justify-end flex-col xl:justify-start pt-10"
+          class="inset-0 xl:absolute w-full flex items-end xl:items-start justify-end flex-col xl:justify-start pt-10"
         >
-          <div class="px-8 ps-8 mx-auto mt-auto mb-10 flex justify-center items-center flex-col">
+          <div
+            class="px-8 ps-8 mx-auto mt-auto mb-10 flex justify-center items-center flex-col"
+          >
             <div class="w-fit mx-auto">
               <img width="117" src="@assets/images/logo-white.png" alt="" />
             </div>
-            <h3 class="text-base lg:text-[2rem] mt-8 text-white">سفر هوشمند، با دات وان سفر</h3>
+            <h3 class="text-base lg:text-[2rem] mt-8 text-white">
+              سفر هوشمند، با دات وان سفر
+            </h3>
           </div>
-         
         </div>
       </div>
       <div
@@ -145,7 +148,7 @@
               class="bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
             />
           </div>
-      
+
           <div class="flex flex-col flex-1 text-right">
             <label class="mb-1 text-sm font-medium">ایمیل(اختیاری)</label>
             <input
@@ -155,15 +158,26 @@
             />
           </div>
 
-          <div class="flex flex-col flex-1 text-right">
-            <label class="mb-1 text-sm font-medium">تاریخ تولد:</label>
-
+          <div
+            class="dp peer w-full relative "
+            id="outbound_date_picker"
+            style="direction: rtl"
+          >
+            <label for="birth" class="mb-1 text-sm font-medium">
+              تاریخ تولد:
+            </label>
             <div
-              class="datepicker-wrapper group relative bg-white rounded-[.875rem] px-4 py-2 border border-gray-300 placeholder-[#CFCFCF] focus:outline-none outline-none"
+              class="date_picker_input has-arrow peer flex items-center justify-between"
             >
-              <div class="absolute pointer-events-none left-3 bottom-3">
+              <input
+                readonly
+                id="birth"
+                type="text"
+                placeholder="روز / ماه / سال"
+                class="date placeholder:text-[#CFCFCF] bg-white overflow-hidden py-2 w-full rounded-[.875rem] px-4 overflow-ellipsis outline-none"
+              />
+              <div class="absolute left-3 transition-transform duration-500 select-icon pointer-events-none">
                 <svg
-                  class="select-icon duration-500 transition-transform"
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
@@ -171,7 +185,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M14.9396 6.71094L10.0496 11.6009C9.47207 12.1784 8.52707 12.1784 7.94957 11.6009L3.05957 6.71094"
+                    d="M14.9401 6.71252L10.0501 11.6025C9.47256 12.18 8.52756 12.18 7.95006 11.6025L3.06006 6.71252"
                     stroke="#292D32"
                     stroke-width="1.5"
                     stroke-miterlimit="10"
@@ -180,14 +194,63 @@
                   />
                 </svg>
               </div>
-              <div class="text-input group-[.init]:text-black text-[#CFCFCF]">
-                روز / ماه / سال
-              </div>
-              <input type="date" class="datepicker-input has-arrow" />
             </div>
-      
+            <div
+              class="date_picker_calendar absolute right-0 z-[1000] mt-4 hidden"
+            >
+              <div class="calendar_header" class="items-center">
+                <div class="flex items-center">
+                  <p class="fw-bold cal_label">تاریخ رفت</p>
+
+                  <div
+                    class="select-container year-container relative flex items-center gap-2"
+                  >
+                    <div class="custom-select">
+                      <select name="" id=""></select>
+                    </div>
+                    <div class="dropdown-ico">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.2807 5.9668L8.93404 10.3135C8.4207 10.8268 7.5807 10.8268 7.06737 10.3135L2.7207 5.9668"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button class="change-calendar" type="button">تقویم میلادی</button>
+                </div>
+              </div>
+              <div class="whole-wrapper flex items-center" style="gap: 5px">
+                <div class="month-picker">
+                  <div class="month-list-container">
+                    <div class="selection-indicator"></div>
+                    <div class="month-list"></div>
+                  </div>
+                </div>
+                <div class="cal_wrapper">
+                  <div class="cal_days"></div>
+                  <div class="calendar_main"></div>
+                </div>
+              </div>
+              <div class="actions flex items-center">
+                <button type="button" class="dp-btn delete">حذف</button>
+                <button type="button" class="dp-btn select">انتخاب</button>
+              </div>
+            </div>
           </div>
-       
+
           <div class="flex flex-col relative flex-1 text-right">
             <label class="block text-sm mb-1">وضعیت نظام وظیفه(آقایان)</label>
 
@@ -307,5 +370,9 @@
 
     <script src="@assets/js/form.js"></script>
     <script src="@assets/js/dp.js"></script>
+
+    <script>
+      new DatePicker("outbound_date_picker");
+  </script>
   </body>
 </html>
