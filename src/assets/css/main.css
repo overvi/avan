@@ -60,7 +60,8 @@
   select:has(:disabled:checked) {
     color: #cfcfcf;
   }
-  button , select {
+  button,
+  select {
     cursor: pointer;
   }
 }
@@ -144,5 +145,55 @@
 
   .select-option + div {
     padding-top: 0.5rem;
+  }
+}
+
+@layer components {
+  .checkbox-control {
+    @apply flex items-center gap-2.5;
+  }
+  .checkbox {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    position: relative;
+    height: 1.15em;
+    outline: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0.25em;
+    display: grid;
+    place-content: center;
+    transform: translateY(-0.075em);
+  }
+  .checkbox::before {
+    content: "";
+    width: 1.65em;
+    height: 1.65em;
+    transform: scale(0);
+    background: black;
+    clip-rule: evenodd;
+    transform-origin: bottom left;
+    clip-path: path(
+      "M10.5799 15.58C10.3799 15.58 10.1899 15.5 10.0499 15.36L7.21994 12.53C6.92994 12.24 6.92994 11.76 7.21994 11.47C7.50994 11.18 7.98994 11.18 8.27994 11.47L10.5799 13.77L15.7199 8.62998C16.0099 8.33998 16.4899 8.33998 16.7799 8.62998C17.0699 8.91998 17.0699 9.39998 16.7799 9.68998L11.1099 15.36C10.9699 15.5 10.7799 15.58 10.5799 15.58Z"
+    );
+  }
+  .checkbox::after {
+    content: "";
+    border-radius: 0.25em;
+    position: absolute;
+    inset: 0;
+    transform: scale(0);
+    box-shadow: inset 1.65em 1.65em rgba(0, 0, 0, 0.4);
+  }
+  .checkbox:checked::before {
+    transform: scale(1);
+  }
+  .checkbox:checked::after {
+    transform: scale(1);
+  }
+  .checkbox:checked {
+    outline-color: transparent;
   }
 }

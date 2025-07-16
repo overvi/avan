@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     home: "./src/assets/js/home.js",
     form: "./src/assets/js/form.js",
+    blog: "./src/assets/js/nav.js",
   },
 
   plugins: [
@@ -17,6 +18,7 @@ module.exports = {
         "/step-2/index": "./src/step-2/index.html",
         "/step-3/index": "./src/step-3/index.html",
         "/confirm/index": "./src/confirm/index.html",
+        "/blog/index": "./src/blog/index.html",
       },
       js: {
         filename: "js/[name].[contenthash:8].js",
