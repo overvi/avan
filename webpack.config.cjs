@@ -19,6 +19,7 @@ module.exports = {
         "/step-3/index": "./src/step-3/index.html",
         "/confirm/index": "./src/confirm/index.html",
         "/blog/index": "./src/blog/index.html",
+        "/blog/1/index": "./src/blog/1/index.html",
       },
       js: {
         filename: "js/[name].[contenthash:8].js",
