@@ -273,15 +273,8 @@ aboutTl
       x: -500,
     },
     "0"
-  )
-  .from(
-    ".about-video",
-    {
-      y: 200,
-      opacity: 0,
-    },
-    "0"
   );
+
 avanSafar.from(
   ".avan-safar",
   {
@@ -341,10 +334,7 @@ serviceTl
       x: -500,
     },
     "0"
-  )
-  .from(".about-video", {
-    y: 200,
-  });
+  );
 
 footerTl
   .from(
