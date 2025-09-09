@@ -8,6 +8,7 @@ module.exports = {
     home: "./src/assets/js/home.js",
     form: "./src/assets/js/form.js",
     blog: "./src/assets/js/nav.js",
+    blogDetails : "./src/assets/js/blogDetails.js"
   },
 
   plugins: [
@@ -63,6 +64,8 @@ module.exports = {
   devServer: {
     static: "./dist",
     hot: true,
+    liveReload: true,
+    watchFiles: ["src/**/*"],
   },
 
   resolve: {

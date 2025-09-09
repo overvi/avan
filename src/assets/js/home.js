@@ -49,17 +49,15 @@ ScrollTrigger.create({
 
 new Splide(".splide", {
   direction: "rtl",
-  padding: { right: "15%", left: "15%" },
+  padding: { right: "0", left: "0" },
   pagination: false,
   mediaQuery: "min",
-  arrows: false,
   perPage: 1,
   focus: "center",
   breakpoints: {
     768: {
       padding: { right: "30%", left: "30%" },
       perPage: 1,
-      arrows: true,
     },
   },
 }).mount();
@@ -301,7 +299,7 @@ mm.add("(min-width: 768px)", () => {
   gsap.fromTo(
     ".avan-safar-svg",
     { width: "16rem" },
-    { duration: 1.5, width: "auto" },
+    { duration: 1.5, width: "100%" },
     0
   );
 });

@@ -1,6 +1,15 @@
 const toggleBtn = document.getElementById("mobile-nav-toggle");
 const nav = document.getElementById("mobile-nav");
 const backdrop = document.getElementById("mobile-nav-backdrop");
+const closeBtn = document.getElementById("close-nav");
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    if (navOpen) closeNav();
+  });
+}
+
+
 
 let navOpen = false;
 

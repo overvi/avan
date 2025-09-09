@@ -44,6 +44,11 @@
 
   --color-form: 0, 183, 205;
   --color-gray-300: #f8f8f8;
+  --color-primary :#00B7CD;
+
+  --color-blog-mobile : linear-gradient(to top, transparent 0%, transparent 10%, #f5f5f5 55%, #f5f5f5  100%);
+
+  --color-blog :linear-gradient(to right, transparent 0%, transparent 10%, #f5f5f5 55%, #f5f5f5  100%);
 }
 
 @layer base {
@@ -101,13 +106,13 @@
   }
 
   .hamburger-span {
-    @apply block bg-black rounded-sm transition-all duration-700;
+    @apply block bg-white rounded-sm transition-all duration-700;
     height: 2px !important;
     width: 100% !important;
   }
 
-  .splide__slide.is-active div {
-    transform: scale(2);
+  .splide_navgan .splide__slide.is-active div {
+    transform: scale(1.5);
   }
 
   .datepicker-toggle {
@@ -211,5 +216,11 @@
   }
   .checkbox:checked {
     outline-color: transparent;
+  }
+}
+
+@media (width > 768px) {
+  .splide_navgan .splide__slide.is-active div {
+    transform:  scale(2);
   }
 }
