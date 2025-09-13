@@ -1,12 +1,10 @@
 import DatePicker from "../../../lib/datepicker.esm";
-import "../../../lib/datepicker.css";
 
 const selects = document.querySelectorAll(".has-arrow");
 const toggleOptions = document.querySelectorAll(".toggle-option");
 
 selects.forEach((select) => {
   select.addEventListener("click", (e) => {
-
     selects.forEach((otherSelect) => {
       if (otherSelect !== select) {
         otherSelect.parentElement
