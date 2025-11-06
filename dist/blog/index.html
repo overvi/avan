@@ -4,47 +4,224 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avan Trip</title>
-    <link rel="stylesheet" href="/css/main.83cc86f8.css" />
+    <link rel="stylesheet" href="/css/main.1ab180e5.css" />
+   
   </head>
 
   <body class="max-w-screen overflow-x-hidden">
+    <dialog id="filters"  class=" h-screen desktop:hidden w-screen outline-none z-[10000] bg-transparent backdrop:bg-black/45">
+      <div class="min-h-[40.625rem] flex flex-col justify-between px-5 fixed right-0 left-0 bottom-0 rounded-t-[1.25rem] bg-gray-300 w-full">
+        <div>
+
+          <div class="flex items-center justify-between">
+             <div class=" my-6 desktop:hidden ">
+                <button  class="flex items-center gap-2 outline-none">
+    
+                  <div>
+                    <img src="/assets/img/document-filter.1ef45694.png" alt="">
+                  </div>
+                  <p class="text-sm font-light">فیلترها</p>
+                </button>
+              </div>
+              <button onclick="document.getElementById('filters').close()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.16992 14.8319L14.8299 9.17188" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.8299 14.8319L9.16992 9.17188" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </button>
+          </div>
+               <div class="pt-4 border-y border-y-[#E1E1E1] pb-4">
+                  <h3>دسته بندی</h3>
+                  <ul class="mt-4 space-y-3">
+                    <li class="flex items-center gap-2 text-sm">
+                      <label class="checkbox-control">
+                        <input type="checkbox" class="checkbox checkbox-form" name="checkbox" />
+                        <p>دسته بندی 1</p>
+                      </label>
+                    </li>
+                    <li class="flex items-center gap-2 text-sm">
+                      <label class="checkbox-control">
+                        <input type="checkbox" class="checkbox checkbox-form" name="checkbox" />
+                        <p>دسته بندی 2</p>
+                      </label>
+                    </li>
+                    <li class="flex items-center gap-2 text-sm">
+                      <label class="checkbox-control">
+                        <input type="checkbox" class="checkbox checkbox-form" name="checkbox" />
+                        <p>دسته بندی 3</p>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                    <div class="pt-4 border-b border-b-[#E1E1E1] pb-4">
+                  <h3>تگ های پر بازدید</h3>
+                  <ul class="grid grid-cols-3 gap-4 mt-4">
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        تگ 1
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        تگ 331
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        تگ 1
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        43 تگ 1
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        تگ 451
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        4322تگ 1
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        432 تگ 1
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        تگ 1
+                      </button>
+                    </li>
+                    <li>
+                      <button class="bg-white rounded-[.625rem] text-xs px-4 py-1">
+                        تگ 1
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+        </div>
+        <div class="border-t border-t-[#E1E1E1] pt-4 pb-7.5">
+          <button onclick="document.getElementById('filters').close()" class="w-full bg-black  py-2  text-white font-light rounded-xl">اعمال فیلتر ها</button>
+        </div>
+      </div>
+    </dialog>
     <div
       id="mobile-nav-backdrop"
       class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-700 z-[100]"
     ></div>
 
-    <aside
-      aria-label="Mobiel Nav"
-      id="mobile-nav"
-      class="fixed right-0 pointer-events-none z-[100] opacity-0 left-20 p-6 transition-opacity duration-700 bg-white shadow-lg h-full top-0 bottom-0"
+       <aside
+      aria-label="Mobile Nav"
+      class="fixed opacity-0  pointer-events-none pb-10 right-0 left-0 z-[100]   p-6 transition-opacity duration-700 bg-white shadow-lg h-full top-0 bottom-0"
+          id="mobile-nav"
+
     >
-      <div class="mt-20">
-        <div class="flex items-center justify-between mb-16">
-          <div>
-            <img width="56" src="/assets/img/logo.390b117f.avif" alt="" />
-          </div>
-          <div>
-            <img src="/assets/img/name.3077ceb8.svg" alt="" />
-          </div>
+    <div class="absolute left-0 top-0">
+      <svg width="211" height="174" viewBox="0 0 211 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.3" cx="64" cy="27" r="147" fill="#00B7CD" fill-opacity="0.1"/>
+<circle opacity="0.3" cx="64" cy="27" r="106" fill="#00B7CD" fill-opacity="0.1"/>
+<circle opacity="0.3" cx="64" cy="27" r="63" fill="#00B7CD" fill-opacity="0.2"/>
+</svg>
+
+    </div>
+      <button id="close-nav" class="flex items-center gap-3.5">
+        <div>
+         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 10.6678L-9.17939e-07 21L9.71349 10.539L0.305753 1.33649e-08L20 10.6678Z" fill="black"/>
+</svg>
+
         </div>
-        <nav>
-          <ul
-            class="flex flex-col gap-4 lg:gap-8 *:relative *:cursor-pointer *:*:cursor-pointer"
-          >
-            <li>
-              <a href="#about" class="block">درباره</a>
-            </li>
-            <li>
-              <a href="#services" class="block">خدمات</a>
-            </li>
-            <li><a href="#navgan" class="block">معرفی ناوگان</a></li>
-            <li class="before:!bg-black/50">
-              <a href="#news" class="block">اخبار</a>
-            </li>
-            <li><a href="#contact" class="block">تماس با ما</a></li>
-            <li><a href="#faq" class="block">سوالات متداول</a></li>
-          </ul>
-        </nav>
+        <p>منو</p>
+      </button>
+     <div class="mt-17">
+      <img src="/assets/img/logo-black.d130ed47.avif" alt="">
+     </div>
+      <div class="flex flex-col justify-between h-[80%]">
+        <ul class="mt-14 space-y-2">
+          <li>
+            <a
+              class="flex items-center bg-gray-100 py-3.5 px-6 rounded-xl justify-between"
+              href="/about"
+              data-discover="true"
+              ><p>درباره ما</p>
+              <div >
+               <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-4.88507e-07 11.2735L20 0.44928L10.2865 11.4084L19.6942 22.4493L-4.88507e-07 11.2735Z" fill="#00B7CD"/>
+</svg>
+</div
+            ></a>
+          </li>
+          <li>
+            <a
+              class="flex items-center bg-gray-100 py-3.5 px-6 rounded-xl justify-between"
+              href="/services"
+              data-discover="true"
+              ><p>خدمات</p>
+              <div >
+               <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-4.88507e-07 11.2735L20 0.44928L10.2865 11.4084L19.6942 22.4493L-4.88507e-07 11.2735Z" fill="#00B7CD"/>
+</svg>
+</div
+            ></a>
+          </li>
+          <li>
+            <a
+              class="flex items-center bg-gray-100 py-3.5 px-6 rounded-xl justify-between"
+              href="/blog-list"
+              data-discover="true"
+              ><p>وبلاگ</p>
+              <div >
+               <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-4.88507e-07 11.2735L20 0.44928L10.2865 11.4084L19.6942 22.4493L-4.88507e-07 11.2735Z" fill="#00B7CD"/>
+</svg>
+</div
+            ></a>
+          </li>
+          <li>
+            <a
+              class="flex items-center bg-gray-100 py-3.5 px-6 rounded-xl justify-between"
+              href="/#contact"
+              data-discover="true"
+              ><p>تماس با ما</p>
+              <div >
+               <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-4.88507e-07 11.2735L20 0.44928L10.2865 11.4084L19.6942 22.4493L-4.88507e-07 11.2735Z" fill="#00B7CD"/>
+</svg>
+</div
+            ></a>
+          </li>
+          <li>
+            <a
+              class="flex items-center bg-gray-100 py-3.5 px-6 rounded-xl justify-between"
+              href="/#faq"
+              data-discover="true"
+              ><p>سوالات متداول</p>
+              <div >
+               <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-4.88507e-07 11.2735L20 0.44928L10.2865 11.4084L19.6942 22.4493L-4.88507e-07 11.2735Z" fill="#00B7CD"/>
+</svg>
+</div
+            ></a>
+          </li>
+        </ul>
+        <div
+          class="bg-gray-300 relative h-[15.8125rem] pt-6 ps-7 rounded-xl "
+        >
+        <div class="absolute bg-no-repeat bg-contain inset-0 bg-[url(../images/footer-bg-mobile.png)]"></div>
+        <div>
+          <div>
+            <img width="70" src="/assets/img/logo-black.d130ed47.avif" alt="">
+          </div>
+          <div class="mt-2">
+            <img width="70" src="/assets/img/name.19c52021.avif" alt="">
+          </div>
+          <p class="text-xs font-light mt-1">همراه هر سفر</p>
+        </div>
+        </div>
       </div>
     </aside>
     <header class="pt-6 container-w">
@@ -53,16 +230,16 @@
           <div class="flex items-center gap-6 desktop:gap-0">
             <div class="w-5 h-4 block desktop:!hidden">
               <button
-                class="translate-z-10 sticky z-[101] cursor-pointer hamburger"
+                class="translate-z-10  z-[101] cursor-pointer hamburger"
                 id="mobile-nav-toggle"
                 aria-label="Toggle Mobile Nav"
               >
-                <span class="hamburger-span"></span>
-                <span class="hamburger-span"></span>
-                <span class="!h-[0.12rem] hamburger-span"></span>
+                <span class="hamburger-span !bg-black"></span>
+                <span class="hamburger-span !bg-black"></span>
+                <span class="!h-[0.12rem] hamburger-span !bg-black"></span>
               </button>
             </div>
-            <img width="56" src="/assets/img/logo.390b117f.avif" alt="logo" />
+            <img width="56" src="/assets/img/logo-black.d130ed47.avif" alt="logo" />
           </div>
           <ul
             class="desktop:flex hidden items-center gap-4 lg:gap-8 *:before:pointer-events-none *:before:absolute *:relative *:before:block *:before:right-0 *:before:left-0 *:before:h-[60%] *:cursor-pointer *:*:cursor-pointer *:before:top-0 *:before:bottom-0 *:before:m-auto *:before:bg-black/35 *:before:blur-[15px] *:*:fs-normal *:before:opacity-0 *:hover:before:opacity-100 *:before:transition-opacity *:before:duration-700 *:before:size-full"
@@ -82,11 +259,10 @@
           </ul>
         </div>
         <button
-          class="flex items-center group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-3.5"
+          class="flex items-center group fs-normal bg-primary cursor-pointer transition-colors duration-700 outline hover:bg-black gap-2 rounded-[.875rem] text-white py-[.5em] px-3.5"
         >
           <div>
             <svg
-              class="group-hover:*:fill-black *:transition-colors *:duration-700"
               aria-hidden="true"
               width="24"
               height="24"
@@ -112,166 +288,68 @@
           <p>ثبت نام رانندگان</p>
         </button>
       </nav>
-      <section
-        class="container-w mx-auto mt-9 px-4 py-8 news"
-        id="posts"
-        aria-label="Posts"
+      <div
+        class="min-h-[21.25rem] desktop:min-h-[28.25rem] z-0 pb-[34%] relative mt-12 rounded-[2.5rem] bg-[#f5f5f5] w-full"
       >
-        <div class="flex flex-col md:flex-row gap-8">
-          <div
-            class="md:w-1/2 news-right relative flex justify-center md:justify-end"
-          >
-            <img
-              src="/assets/img/blog-hero.28b34e9c.avif"
-              alt="سرویس ترانسفر فرودگاهی"
-              class="w-full h-auto object-cover rounded-[1.5rem]"
-            />
+        <div class="absolute -z-[1] inset-0 p-3.5">
+          <img
+            class="rounded-[2.5rem] object-cover w-full h-full"
+            src="/assets/img/blog-img.d13552d0.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="bg-blog -z-[1] [background:var(--color-blog-mobile)]  desktop:[background:var(--color-blog)]  inset-0 rounded-[2.5rem] absolute"
+        ></div>
+        <div class="text-black right-10 left-10 absolute not-desktop:top-3.5 desktop:bottom-10">
+          <div class="flex items-center justify-between"> 
 
             <div
-              class="absolute bottom-0 right-0 left-0 mx-auto md:left-0 md:right-0 bg-[#F8F8F8] rounded-[1.5rem] p-6 transform translate-y-1/2 max-w-[80%]"
+              class="flex items-center gap-4 text-[clamp(0.5rem,0.3924rem+0.5063vw,1rem)]"
             >
-              <h3 class="font-bold mb-2 text-right">سرویس ترانسفر فرودگاهی</h3>
-              <p class="mb-4 text-right text-sm">
-                این سرویس، امکان جا‌به‌جایی مسافران هوایی از درب منزل تا فرودگاه
-                و بالعکس فراهم می‌آورد.
-              </p>
-              <div
-                class="flex items-center gap-2 flex-col sm:flex-row justify-between text-sm"
-              >
-                <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                <a
-                  href="#"
-                  class="flex items-center outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem] gap-2"
-                >
-                  بیشتر بخوانید
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                      fill="black"
-                    ></path>
-                    <path
-                      d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                      fill="black"
-                    ></path>
-                  </svg>
-                </a>
+              <div class="bg-white rounded-[10px] py-2 px-4 font-light">
+                <p>هواپیما</p>
               </div>
+              <div class="bg-white rounded-[10px] py-2 px-4 font-light">
+                <p>هواپیما</p>
+              </div>
+              <div class="bg-white hidden desktop:block rounded-[10px] py-2 px-4 font-light">
+                <p>هواپیما</p>
+              </div>
+              <div class="bg-white hidden desktop:block rounded-[10px] py-2 px-4 font-light">
+                <p>هواپیما</p>
+              </div>
+            </div>  <div class="not-desktop:flex hidden  items-center gap-2 font-light">
+            <div>
+              <img src="/assets/img/calendar-edit.b85ecbe6.png" alt="" />
             </div>
+            <p class="text-[clamp(0.625rem,0.5712rem+0.2532vw,0.875rem)]">
+              24 فروردین 1404
+            </p>
           </div>
-          <div class="md:w-1/2 news-left flex flex-col mt-20 desktop:mt-0">
-            <h2 class="text-[2.5rem] font-light mb-6">پربازدید ترین ها</h2>
-
-            <div class="space-y-6">
-              <div class="p-4 border-b border-b-[#E1E1E1] pb-4">
-                <h3 class="font-bold mb-2">سرویس ترانسفر فرودگاهی</h3>
-                <p class="mb-4 text-sm">
-                  این سرویس، امکان جا‌به‌جایی مسافران هوایی از درب منزل تا
-                  فرودگاه و بالعکس فراهم می‌آورد.
-                </p>
-                <div class="flex items-center justify-between text-sm">
-                  <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="p-4 border-b border-b-[#E1E1E1] pb-4">
-                <h3 class="font-bold mb-2">سرویس ترانسفر فرودگاهی</h3>
-                <p class="mb-4 text-sm">
-                  این سرویس، امکان جا‌به‌جایی مسافران هوایی از درب منزل تا
-                  فرودگاه و بالعکس فراهم می‌آورد.
-                </p>
-                <div class="flex items-center justify-between text-sm">
-                  <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="p-4 border-b border-b-[#E1E1E1] pb-4">
-                <h3 class="font-bold mb-2">سرویس ترانسفر فرودگاهی</h3>
-                <p class="mb-4 text-sm">
-                  این سرویس، امکان جا‌به‌جایی مسافران هوایی از درب منزل تا
-                  فرودگاه و بالعکس فراهم می‌آورد.
-                </p>
-                <div class="flex items-center justify-between text-sm">
-                  <span>۱۴۰۴ اردیبهشت ۲۴</span>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
+          </div>
+          <h1
+            class="font-semibold mt-10 text-[clamp(0.875rem,0.7405rem+0.6329vw,1.5rem)]"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+          </h1>
+          <p
+            class="mt-6 text-[clamp(0.75rem,0.6693rem+0.3797vw,1.125rem)] font-light max-w-[60ch]"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است...
+          </p>
+          <div class=" hidden desktop:flex items-center gap-2 font-light mt-10">
+            <div>
+              <img src="/assets/img/calendar-edit.b85ecbe6.png" alt="" />
             </div>
+            <p class="text-[clamp(0.625rem,0.5712rem+0.2532vw,0.875rem)]">
+              24 فروردین 1404
+            </p>
           </div>
         </div>
-      </section>
+      </div>
     </header>
     <section
       class="container-w mx-auto mt-20 blog-search pb-10"
@@ -317,7 +395,16 @@
               class="rounded-[.875rem] py-2 w-full text-sm placeholder:text-black focus:outline-none outline-none"
             />
           </label>
-          <div class="rounded-3xl bg-gray-300 p-6">
+          <div class=" my-6 desktop:hidden">
+            <button onclick="document.getElementById('filters').showModal()" class="flex items-center gap-2">
+
+              <div>
+                <img src="/assets/img/document-filter.1ef45694.png" alt="">
+              </div>
+              <p class="text-sm font-light">فیلترها</p>
+            </button>
+          </div>
+          <div class="rounded-3xl hidden desktop:block bg-gray-300 p-6">
             <h3 class="border-b border-b-[#E1E1E1] pb-2.5">
               پربازدیدترین خبرها
             </h3>
@@ -325,10 +412,11 @@
               <li
                 class="bg-white p-1 rounded-[.625rem] flex items-center gap-1.5"
               >
-                <div class="min-w-14">
+                <div class="min-w-14 rounded-lg">
                   <img
                     width="52"
                     height="52"
+                    class="rounded-lg"
                     src="/assets/img/news-image-one.805ede75.avif"
                     alt=""
                   />
@@ -346,7 +434,8 @@
               >
                 <div class="min-w-14">
                   <img
-                    width="52"
+                    width="52"                    class="rounded-lg"
+
                     height="52"
                     src="/assets/img/news-image-two.a722cd03.avif"
                     alt=""
@@ -366,7 +455,8 @@
                 <div class="min-w-14">
                   <img
                     width="52"
-                    height="52"
+                    height="52"                    class="rounded-lg"
+
                     src="/assets/img/news-image-three.415fccfb.avif"
                     alt=""
                   />
@@ -384,7 +474,8 @@
               >
                 <div class="min-w-14">
                   <img
-                    width="52"
+                    width="52"                    class="rounded-lg"
+
                     height="52"
                     src="/assets/img/news-image-four.76208874.avif"
                     alt=""
@@ -401,22 +492,22 @@
             </ul>
             <div class="pt-4 border-b border-b-[#E1E1E1] pb-4">
               <h3>دسته بندی</h3>
-              <ul class="mt-4 space-y-2">
+              <ul class="mt-4 space-y-3">
                 <li class="flex items-center gap-2 text-sm">
                   <label class="checkbox-control">
-                    <input type="checkbox" class="checkbox" name="checkbox" />
+                    <input type="checkbox" class="checkbox checkbox-form" name="checkbox" />
                     <p>دسته بندی 1</p>
                   </label>
                 </li>
                 <li class="flex items-center gap-2 text-sm">
                   <label class="checkbox-control">
-                    <input type="checkbox" class="checkbox" name="checkbox" />
+                    <input type="checkbox" class="checkbox checkbox-form" name="checkbox" />
                     <p>دسته بندی 2</p>
                   </label>
                 </li>
                 <li class="flex items-center gap-2 text-sm">
                   <label class="checkbox-control">
-                    <input type="checkbox" class="checkbox" name="checkbox" />
+                    <input type="checkbox" class="checkbox checkbox-form" name="checkbox" />
                     <p>دسته بندی 3</p>
                   </label>
                 </li>
@@ -474,105 +565,128 @@
             </div>
             <div class="pt-4">
               <h3>ما را دنبال کنید!</h3>
-              <div class="mt-4 flex items-end justify-between">
-                <button aria-label="Whats App">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    <div class="mt-4 flex items-end justify-between">
+            <a
+              href="#"
+              class=" bg-primary hover:bg-black   group rounded-full p-2 transition"
+            >
+              <svg
+                width="24"
+
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M6.94006 20.6304C8.43006 21.5004 10.1601 22.0005 12.0001 22.0005C17.6301 22.0005 22.31 17.0305 21.98 11.4105C21.64 5.61045 16.37 1.14045 10.3 2.14045C6.12004 2.83045 2.77005 6.22045 2.12005 10.4005C1.74005 12.8205 2.24007 15.1105 3.33007 17.0005L2.44006 20.3104C2.24006 21.0604 2.93004 21.7404 3.67004 21.5304L6.94006 20.6304Z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M17 15.1705C17 15.3505 16.96 15.5405 16.87 15.7205C16.78 15.9005 16.67 16.0705 16.53 16.2305C16.28 16.5005 16.01 16.7005 15.71 16.8205C15.41 16.9505 15.08 17.0105 14.73 17.0105C14.22 17.0105 13.67 16.8905 13.1 16.6405C12.52 16.3905 11.95 16.0605 11.38 15.6505C10.8 15.2305 10.26 14.7605 9.73999 14.2505C9.21999 13.7305 8.76003 13.1805 8.34003 12.6105C7.93003 12.0405 7.59999 11.4705 7.35999 10.9005C7.11999 10.3305 7 9.78047 7 9.26047C7 8.92047 7.05999 8.59047 7.17999 8.29047C7.29999 7.98047 7.49001 7.70046 7.76001 7.45046C8.08001 7.13046 8.42999 6.98047 8.79999 6.98047C8.93999 6.98047 9.08002 7.01047 9.21002 7.07047C9.34002 7.13047 9.45999 7.22046 9.54999 7.35046L10.7 9.00047C10.79 9.13047 10.86 9.24046 10.9 9.35046C10.95 9.46046 10.97 9.56047 10.97 9.66047C10.97 9.78047 10.93 9.90046 10.86 10.0205C10.79 10.1405 10.7 10.2605 10.58 10.3805L10.2 10.7805C10.14 10.8405 10.12 10.9005 10.12 10.9805C10.12 11.0205 10.13 11.0605 10.14 11.1005C10.16 11.1405 10.17 11.1705 10.18 11.2005C10.27 11.3705 10.43 11.5805 10.65 11.8405C10.88 12.1005 11.12 12.3705 11.38 12.6305C11.65 12.9005 11.91 13.1405 12.18 13.3705C12.44 13.5905 12.66 13.7405 12.83 13.8305C12.86 13.8405 12.89 13.8605 12.92 13.8705C12.96 13.8905 13 13.8905 13.05 13.8905C13.14 13.8905 13.2 13.8605 13.26 13.8005L13.64 13.4205C13.77 13.2905 13.89 13.2005 14 13.1405C14.12 13.0705 14.23 13.0305 14.36 13.0305C14.46 13.0305 14.56 13.0505 14.67 13.1005C14.78 13.1505 14.9 13.2105 15.02 13.3005L16.68 14.4805C16.81 14.5705 16.9 14.6805 16.96 14.8005C16.97 14.9105 17 15.0305 17 15.1705Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              href="#"
+              class=" bg-primary hover:bg-black group rounded-full p-2 transition"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  opacity="0.4"
+                  cx="12"
+                  cy="12"
+                  r="12"
+                  fill="white"
+                ></circle>
+                <g clip-path="url(#clip0_2390_28003)">
+                  <mask
+                    id="mask0_2390_28003"
+                    style="mask-type: luminance"
+                    maskUnits="userSpaceOnUse"
+                    x="6"
+                    y="6"
+                    width="12"
+                    height="12"
                   >
-                    <circle cx="20" cy="20" r="20" fill="white" />
+                    <path d="M6 6H18V18H6V6Z" fill="white"></path>
+                  </mask>
+                  <g mask="url(#mask0_2390_28003)">
                     <path
-                      opacity="0.4"
-                      d="M14.9403 28.63C16.4303 29.5 18.1603 30 20.0003 30C25.6303 30 30.3103 25.03 29.9803 19.41C29.6403 13.61 24.3703 9.13996 18.3003 10.14C14.1203 10.83 10.7703 14.22 10.1203 18.4C9.74029 20.82 10.2403 23.11 11.3303 25L10.4403 28.31C10.2403 29.06 10.9303 29.74 11.6703 29.53L14.9403 28.63Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M25 23.17C25 23.35 24.96 23.54 24.87 23.72C24.78 23.9 24.67 24.07 24.53 24.23C24.28 24.5 24.01 24.7 23.71 24.82C23.41 24.95 23.08 25.01 22.73 25.01C22.22 25.01 21.67 24.89 21.1 24.64C20.52 24.39 19.95 24.06 19.38 23.65C18.8 23.23 18.26 22.76 17.74 22.25C17.22 21.73 16.76 21.18 16.34 20.61C15.93 20.04 15.6 19.47 15.36 18.9C15.12 18.33 15 17.78 15 17.26C15 16.92 15.06 16.59 15.18 16.29C15.3 15.98 15.49 15.7 15.76 15.45C16.08 15.13 16.43 14.98 16.8 14.98C16.94 14.98 17.08 15.01 17.21 15.07C17.34 15.13 17.46 15.22 17.55 15.35L18.7 17C18.79 17.13 18.86 17.24 18.9 17.35C18.95 17.46 18.97 17.56 18.97 17.66C18.97 17.78 18.93 17.9 18.86 18.02C18.79 18.14 18.7 18.26 18.58 18.38L18.2 18.78C18.14 18.84 18.12 18.9 18.12 18.98C18.12 19.02 18.13 19.06 18.14 19.1C18.16 19.14 18.17 19.17 18.18 19.2C18.27 19.37 18.43 19.58 18.65 19.84C18.88 20.1 19.12 20.37 19.38 20.63C19.65 20.9 19.91 21.14 20.18 21.37C20.44 21.59 20.66 21.74 20.83 21.83C20.86 21.84 20.89 21.86 20.92 21.87C20.96 21.89 21 21.89 21.05 21.89C21.14 21.89 21.2 21.86 21.26 21.8L21.64 21.42C21.77 21.29 21.89 21.2 22 21.14C22.12 21.07 22.23 21.03 22.36 21.03C22.46 21.03 22.56 21.05 22.67 21.1C22.78 21.15 22.9 21.21 23.02 21.3L24.68 22.48C24.81 22.57 24.9 22.68 24.96 22.8C24.97 22.91 25 23.03 25 23.17Z"
-                      fill="black"
-                    />
-                  </svg>
-                </button>
-                <button aria-label="X">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="20" cy="20" r="20" fill="white" />
-                    <circle opacity="0.4" cx="20" cy="20" r="12" fill="black" />
-                    <g clip-path="url(#clip0_356_3116)">
-                      <mask
-                        id="mask0_356_3116"
-                        style="mask-type: luminance"
-                        maskUnits="userSpaceOnUse"
-                        x="14"
-                        y="14"
-                        width="12"
-                        height="12"
-                      >
-                        <path d="M14 14H26V26H14V14Z" fill="white" />
-                      </mask>
-                      <g mask="url(#mask0_356_3116)">
-                        <path
-                          d="M23.45 14.5623H25.2903L21.2703 19.1685L26 25.4377H22.2971L19.3949 21.6363L16.0777 25.4377H14.2357L18.5351 20.5091L14 14.5631H17.7971L20.4166 18.0371L23.45 14.5623ZM22.8029 24.3337H23.8229L17.24 15.6088H16.1463L22.8029 24.3337Z"
-                          fill="black"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_356_3116">
-                        <rect
-                          width="12"
-                          height="12"
-                          fill="white"
-                          transform="translate(14 14)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-                <button aria-label="Youtube">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="20" cy="20" r="20" fill="white" />
-                    <path
-                      opacity="0.4"
-                      d="M25 28H15C12 28 10 26 10 23V17C10 14 12 12 15 12H25C28 12 30 14 30 17V23C30 26 28 28 25 28Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M19.4196 17.49L21.8896 18.97C22.8296 19.54 22.8296 20.46 21.8896 21.03L19.4196 22.51C18.4196 23.11 17.5996 22.65 17.5996 21.48V18.51C17.5996 17.35 18.4196 16.89 19.4196 17.49Z"
-                      fill="black"
-                    />
-                  </svg>
-                </button>
-                <button aria-label="Linkd In">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="20" cy="20" r="20" fill="white" />
-                    <circle opacity="0.4" cx="20" cy="20" r="12" fill="black" />
-                    <path
-                      d="M13.0858 17.7111H16.0878V26.7421H13.0858V17.7111ZM14.5868 16.4781H14.5668C14.3514 16.4924 14.1353 16.4619 13.9322 16.3886C13.7291 16.3154 13.5434 16.2008 13.3867 16.0523C13.23 15.9037 13.1057 15.7243 13.0217 15.5254C12.9377 15.3265 12.8958 15.1124 12.8986 14.8965C12.9013 14.6806 12.9487 14.4676 13.0378 14.2709C13.1269 14.0742 13.2557 13.8981 13.4162 13.7536C13.5766 13.6091 13.7652 13.4994 13.9701 13.4313C14.175 13.3633 14.3918 13.3384 14.6068 13.3581C14.8223 13.3423 15.0386 13.3713 15.2423 13.4432C15.446 13.5151 15.6326 13.6284 15.7904 13.7759C15.9482 13.9235 16.0737 14.1021 16.1591 14.3006C16.2444 14.499 16.2878 14.713 16.2864 14.929C16.285 15.145 16.2389 15.3584 16.151 15.5557C16.0631 15.753 15.9353 15.93 15.7757 16.0756C15.616 16.2211 15.428 16.332 15.2234 16.4013C15.0188 16.4705 14.802 16.4967 14.5868 16.4781ZM26.9118 26.7421H23.9098V21.9121C23.9098 20.6971 23.4758 19.8691 22.3898 19.8691C22.0512 19.8708 21.7213 19.9772 21.4456 20.1738C21.1698 20.3704 20.9617 20.6475 20.8498 20.9671C20.7713 21.2028 20.7374 21.4511 20.7498 21.6991V26.7421H17.7498C17.7498 26.7391 17.7898 18.5581 17.7498 17.7121H20.7518V18.9921C21.0232 18.5198 21.4188 18.1309 21.8957 17.8677C22.3726 17.6045 22.9125 17.477 23.4568 17.4991C25.4318 17.4991 26.9128 18.7901 26.9128 21.5641L26.9118 26.7421Z"
-                      fill="black"
-                    />
-                  </svg>
-                </button>
-              </div>
+                      d="M15.45 6.5625H17.2903L13.2703 11.1688L18 17.4379H14.2971L11.3949 13.6365L8.07771 17.4379H6.23571L10.5351 12.5094L6 6.56336H9.79714L12.4166 10.0374L15.45 6.5625ZM14.8029 16.3339H15.8229L9.24 7.60907H8.14629L14.8029 16.3339Z"
+                      fill="white"
+                    ></path>
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2390_28003">
+                    <rect
+                      width="12"
+                      height="12"
+                      fill="white"
+                      transform="translate(6 6)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class=" bg-primary hover:bg-black group rounded-full p-2 transition"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M17 20H7C4 20 2 18 2 15V9C2 6 4 4 7 4H17C20 4 22 6 22 9V15C22 18 20 20 17 20Z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M11.42 9.49009L13.89 10.9701C14.83 11.5401 14.83 12.4601 13.89 13.0301L11.42 14.5101C10.42 15.1101 9.59998 14.6501 9.59998 13.4801V10.5101C9.59998 9.3501 10.42 8.89009 11.42 9.49009Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class=" bg-primary hover:bg-black group rounded-full p-2 transition"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  opacity="0.4"
+                  cx="12"
+                  cy="12"
+                  r="12"
+                  fill="white"
+                ></circle>
+                <path
+                  d="M5.08582 9.71114H8.08782V18.7421H5.08582V9.71114ZM6.58682 8.47814H6.56682C6.35137 8.49241 6.13531 8.46193 5.93221 8.38864C5.72911 8.31535 5.54338 8.20083 5.38669 8.05227C5.23 7.90372 5.10574 7.72435 5.02174 7.52544C4.93774 7.32654 4.8958 7.1124 4.89857 6.8965C4.90133 6.6806 4.94875 6.46761 5.03782 6.27092C5.1269 6.07424 5.25571 5.89811 5.41616 5.75362C5.5766 5.60913 5.76521 5.49941 5.97012 5.43135C6.17503 5.36329 6.39181 5.33836 6.60682 5.35814C6.82226 5.34233 7.03864 5.37128 7.24234 5.44318C7.44604 5.51509 7.63265 5.62838 7.79042 5.77594C7.94819 5.9235 8.0737 6.10212 8.15906 6.30056C8.24442 6.499 8.28777 6.71296 8.28638 6.92898C8.285 7.14499 8.23891 7.35838 8.15101 7.55571C8.06312 7.75304 7.93533 7.93004 7.77568 8.07556C7.61603 8.22108 7.42798 8.33197 7.22338 8.40126C7.01877 8.47055 6.80204 8.49672 6.58682 8.47814ZM18.9118 18.7421H15.9098V13.9121C15.9098 12.6971 15.4758 11.8691 14.3898 11.8691C14.0512 11.8708 13.7213 11.9772 13.4456 12.1738C13.1698 12.3704 12.9617 12.6475 12.8498 12.9671C12.7713 13.2028 12.7374 13.4511 12.7498 13.6991V18.7421H9.74982C9.74982 18.7391 9.78982 10.5581 9.74982 9.71214H12.7518V10.9921C13.0232 10.5198 13.4188 10.1309 13.8957 9.8677C14.3726 9.60448 14.9125 9.47701 15.4568 9.49914C17.4318 9.49914 18.9128 10.7901 18.9128 13.5641L18.9118 18.7421Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </a>
+          </div>
+             
             </div>
           </div>
         </div>
@@ -597,30 +711,17 @@
                   فرودگاه و بالعکس فراهم می‌آورد.
                 </p>
                 <div class="flex items-center justify-between mt-9">
-                  <p class="text-xs">24 اردیبهشت 1404</p>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
+                  <p class="text-xs text-[#9D9D9D]">24 اردیبهشت 1404</p>
+                 <a
+              class="flex items-center gap-2 text-sm  bg-white py-1   px-3 rounded-[10px]"
+            >
+              بیشتر بخوانید
+              <div>
+<svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-1.47214e-07 9.34823L16 7.54683e-07L8.22921 9.4647L15.7554 19L-1.47214e-07 9.34823Z" fill="black"/>
+</svg>
+              </div>
+            </a>
                 </div>
               </div>
             </div>
@@ -640,30 +741,17 @@
                   فرودگاه و بالعکس فراهم می‌آورد.
                 </p>
                 <div class="flex items-center justify-between mt-9">
-                  <p class="text-xs">24 اردیبهشت 1404</p>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
+                  <p class="text-xs text-[#9D9D9D]">24 اردیبهشت 1404</p>
+                    <a
+              class="flex items-center gap-2 text-sm  bg-white py-1   px-3 rounded-[10px]"
+            >
+              بیشتر بخوانید
+              <div>
+<svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-1.47214e-07 9.34823L16 7.54683e-07L8.22921 9.4647L15.7554 19L-1.47214e-07 9.34823Z" fill="black"/>
+</svg>
+              </div>
+            </a>
                 </div>
               </div>
             </div>
@@ -683,30 +771,17 @@
                   فرودگاه و بالعکس فراهم می‌آورد.
                 </p>
                 <div class="flex items-center justify-between mt-9">
-                  <p class="text-xs">24 اردیبهشت 1404</p>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
+                  <p class="text-xs text-[#9D9D9D]">24 اردیبهشت 1404</p>
+                    <a
+              class="flex items-center gap-2 text-sm  bg-white py-1   px-3 rounded-[10px]"
+            >
+              بیشتر بخوانید
+              <div>
+<svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-1.47214e-07 9.34823L16 7.54683e-07L8.22921 9.4647L15.7554 19L-1.47214e-07 9.34823Z" fill="black"/>
+</svg>
+              </div>
+            </a>
                 </div>
               </div>
             </div>
@@ -726,30 +801,17 @@
                   فرودگاه و بالعکس فراهم می‌آورد.
                 </p>
                 <div class="flex items-center justify-between mt-9">
-                  <p class="text-xs">24 اردیبهشت 1404</p>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
+                  <p class="text-xs text-[#9D9D9D]">24 اردیبهشت 1404</p>
+                    <a
+              class="flex items-center gap-2 text-sm  bg-white py-1   px-3 rounded-[10px]"
+            >
+              بیشتر بخوانید
+              <div>
+<svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-1.47214e-07 9.34823L16 7.54683e-07L8.22921 9.4647L15.7554 19L-1.47214e-07 9.34823Z" fill="black"/>
+</svg>
+              </div>
+            </a>
                 </div>
               </div>
             </div>
@@ -769,30 +831,17 @@
                   فرودگاه و بالعکس فراهم می‌آورد.
                 </p>
                 <div class="flex items-center justify-between mt-9">
-                  <p class="text-xs">24 اردیبهشت 1404</p>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 outline-offset-5 hover:outline-black hover:outline px-2 rounded-[.375rem]"
-                  >
-                    بیشتر بخوانید
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M7.81 2H16.18C19.83 2 22 4.17 22 7.81V16.18C22 19.82 19.83 21.99 16.19 21.99H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        d="M5.47 11.4704L9.76 7.18039C10.05 6.89039 10.53 6.89039 10.82 7.18039C11.11 7.47039 11.11 7.95039 10.82 8.24039L7.81 11.2504H18C18.41 11.2504 18.75 11.5904 18.75 12.0004C18.75 12.4104 18.41 12.7504 18 12.7504H7.81L10.82 15.7604C11.11 16.0504 11.11 16.5304 10.82 16.8204C10.67 16.9704 10.48 17.0404 10.29 17.0404C10.1 17.0404 9.91 16.9704 9.76 16.8204L5.47 12.5304C5.33 12.3904 5.25 12.2004 5.25 12.0004C5.25 11.8004 5.33 11.6104 5.47 11.4704Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </a>
+                  <p class="text-xs text-[#9D9D9D]">24 اردیبهشت 1404</p>
+                    <a
+              class="flex items-center gap-2 text-sm  bg-white py-1   px-3 rounded-[10px]"
+            >
+              بیشتر بخوانید
+              <div>
+<svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-1.47214e-07 9.34823L16 7.54683e-07L8.22921 9.4647L15.7554 19L-1.47214e-07 9.34823Z" fill="black"/>
+</svg>
+              </div>
+            </a>
                 </div>
               </div>
             </div>
@@ -802,30 +851,10 @@
               aria-label="Next Blog Page"
               class="size-6 bg-gray-300 group disabled:bg-gray-300/45 rounded-[6px] flex items-center justify-center"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.62 3.95337L13.6667 8.00004L9.62 12.0467"
-                  stroke="#00B7CD"
-                  class="group-disabled:stroke-[#999999]"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M2.33331 8H13.5533"
-                  stroke="#00B7CD"
-                  class="group-disabled:stroke-[#999999]"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+             <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 6.60384L1.55023e-07 13L4.85674 6.52416L0.152877 -1.82303e-09L10 6.60384Z" fill="#00B7CD"/>
+</svg>
+
             </button>
             <div class="flex items-center gap-1">
               <button
@@ -849,7 +878,7 @@
                 2
               </button>
               <button
-                class="size-6 text-xs bg-black text-white rounded-[6px] flex items-center justify-center"
+                class="size-6 text-xs bg-primary text-white rounded-[6px] flex items-center justify-center"
               >
                 1
               </button>
@@ -859,30 +888,10 @@
               aria-label="Next Blog Page"
               class="size-6 bg-gray-300 rotate-180 group disabled:bg-gray-300/45 rounded-[6px] flex items-center justify-center"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.62 3.95337L13.6667 8.00004L9.62 12.0467"
-                  stroke="#00B7CD"
-                  class="group-disabled:stroke-[#999999]"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M2.33331 8H13.5533"
-                  stroke="#00B7CD"
-                  class="group-disabled:stroke-[#999999]"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <svg class="rotate-180" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M-2.94369e-07 6.39616L10 -4.31473e-08L5.14326 6.47584L9.84712 13L-2.94369e-07 6.39616Z" fill="black"/>
+</svg>
+
             </button>
           </div>
         </div>
@@ -893,7 +902,7 @@
         class="relative bg-[#F8F8F8] z-0 rounded-[2.5rem] footer-top overflow-hidden shadow-lg"
       >
         <div
-          class="relative bg-[37%] footer-top desktop:bg-left bg-no-repeat flex flex-col min-h-140 bg-[url(../images/blog-footer.avif)] md:flex-row items-center gap-6 p-6"
+          class="relative bg-[50%_100%]  footer-top desktop:bg-left bg-no-repeat flex flex-col min-h-170 desktop:min-h-140 bg-[url(../images/footer-bg-mobile.png)] desktop:bg-[url(../images/cta.avif)] md:flex-row items-center gap-6 p-6"
         >
           <div class="absolute bottom-0 right-0 -z-[1]">
             <svg
@@ -931,10 +940,11 @@
             class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-right space-y-4"
           >
             <div>
-              <img width="100" src="/assets/img/logo.390b117f.avif" alt="" />
-            </div>
+              <img width="100" src="/assets/img/logo-black.d130ed47.avif" alt="" />
+            </div>  <div class="mt-2">
+            <img  src="/assets/img/name.19c52021.avif" alt="">
+          </div>
             <div>
-              <img src="/assets/img/logo-name.ef3b389f.avif" alt="" />
               <p class="text-2xl font-light">همراه هر سفر</p>
             </div>
 
@@ -942,11 +952,11 @@
               class="flex-wrap gap-3 grid grid-cols-1 *:justify-center *:w-full sm:grid-cols-2 justify-center md:justify-start mt-4"
             >
               <a
-                class="flex items-center group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-6"
+                class="flex items-center group bg-primary hover:bg-black fs-normal cursor-pointer transition-colors duration-700   gap-2  rounded-[.875rem] text-white py-[.5em] px-6"
               >
                 <div>
                   <svg
-                    class="group-hover:*:fill-black *:transition-colors *:duration-700"
+                    class="*:fill-white *:transition-colors *:duration-700"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -984,7 +994,7 @@
                 <p>دریافت مستقیم اندروید</p>
               </a>
               <a
-                class="flex items-center w-fit group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-3.5"
+                class="flex items-center w-fit group fs-normal bg-primary hover:bg-black cursor-pointer transition-colors duration-700   gap-2  rounded-[.875rem] text-white py-[.5em] px-3.5"
               >
                 <div>
                   <svg
@@ -1015,11 +1025,11 @@
                 <p>دریافت از مایکت</p>
               </a>
               <a
-                class="flex items-center group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-3.5"
+                class="flex items-center group fs-normal bg-primary hover:bg-black cursor-pointer transition-colors duration-700   gap-2  rounded-[.875rem] text-white py-[.5em] px-3.5"
               >
                 <div>
                   <svg
-                    class="group-hover:*:fill-black *:transition-colors *:duration-700"
+                    class="*:fill-white *:transition-colors *:duration-700"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1072,11 +1082,11 @@
               </a>
 
               <a
-                class="flex items-center w-fit group fs-normal hover:text-black cursor-pointer transition-colors duration-700 outline hover:bg-white gap-2 bg-black rounded-[.875rem] text-white py-[.5em] px-6"
+                class="flex items-center w-fit group fs-normal bg-primary hover:bg-black cursor-pointer transition-colors duration-700   gap-2  rounded-[.875rem] text-white py-[.5em] px-6"
               >
                 <div>
                   <svg
-                    class="group-hover:*:fill-black *:transition-colors *:duration-700"
+                    class="*:fill-white *:transition-colors *:duration-700"
                     width="25"
                     height="25"
                     viewBox="0 0 25 25"
@@ -1112,165 +1122,11 @@
         </div>
       </div>
 
-      <div
-        class="mt-8 footer-bottom flex flex-col md:flex-row *:basis-full gap-4"
-      >
-        <div
-          class="flex items-center overflow-hidden z-0 relative justify-between bg-black text-white rounded-[.875rem] p-4 py-6"
-        >
-          <div class="absolute -z-[1] -left-5">
-            <svg
-              width="192"
-              height="192"
-              viewBox="0 0 192 192"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="96" cy="96" r="96" fill="white" fill-opacity="0.08" />
-              <ellipse
-                cx="96"
-                cy="95.5"
-                rx="69"
-                ry="69.5"
-                fill="white"
-                fill-opacity="0.08"
-              />
-              <circle cx="96" cy="95" r="42" fill="white" fill-opacity="0.07" />
-            </svg>
-          </div>
-          <div class="flex flex-col gap-3 ps-5">
-            <div>
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.4"
-                  d="M34.3666 14.0837C32.6166 6.38366 25.9 2.91699 20 2.91699C20 2.91699 20 2.91699 19.9833 2.91699C14.1 2.91699 7.36664 6.36699 5.61664 14.067C3.66664 22.667 8.93331 29.9503 13.7 34.5337C15.4666 36.2337 17.7333 37.0837 20 37.0837C22.2666 37.0837 24.5333 36.2337 26.2833 34.5337C31.05 29.9503 36.3166 22.6837 34.3666 14.0837Z"
-                  fill="white"
-                ></path>
-                <path
-                  d="M20 22.4336C22.8995 22.4336 25.25 20.0831 25.25 17.1836C25.25 14.2841 22.8995 11.9336 20 11.9336C17.1005 11.9336 14.75 14.2841 14.75 17.1836C14.75 20.0831 17.1005 22.4336 20 22.4336Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </div>
-            <p>تهران - چهار راه جهان کودک - برج وان - طبقه 6</p>
-          </div>
-        </div>
-        <div
-          class="flex items-center overflow-hidden z-0 relative justify-between bg-black text-white rounded-[.875rem] p-4 py-6"
-        >
-          <div class="absolute -z-[1] -left-5">
-            <svg
-              width="192"
-              height="192"
-              viewBox="0 0 192 192"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="96" cy="96" r="96" fill="white" fill-opacity="0.08" />
-              <ellipse
-                cx="96"
-                cy="95.5"
-                rx="69"
-                ry="69.5"
-                fill="white"
-                fill-opacity="0.08"
-              />
-              <circle cx="96" cy="95" r="42" fill="white" fill-opacity="0.07" />
-            </svg>
-          </div>
-          <div class="flex flex-col gap-3 ps-5">
-            <div>
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M29.3667 17.9163C28.65 17.9163 28.0833 17.333 28.0833 16.633C28.0833 16.0163 27.4667 14.733 26.4333 13.6163C25.4167 12.533 24.3 11.8997 23.3667 11.8997C22.65 11.8997 22.0833 11.3163 22.0833 10.6163C22.0833 9.91634 22.6667 9.33301 23.3667 9.33301C25.0333 9.33301 26.7833 10.233 28.3167 11.8497C29.75 13.3663 30.6667 15.2497 30.6667 16.6163C30.6667 17.333 30.0833 17.9163 29.3667 17.9163Z"
-                  fill="white"
-                />
-                <path
-                  d="M35.3833 17.9163C34.6667 17.9163 34.1 17.333 34.1 16.633C34.1 10.7163 29.2833 5.91634 23.3833 5.91634C22.6667 5.91634 22.1 5.33301 22.1 4.63301C22.1 3.93301 22.6667 3.33301 23.3667 3.33301C30.7 3.33301 36.6667 9.29967 36.6667 16.633C36.6667 17.333 36.0833 17.9163 35.3833 17.9163Z"
-                  fill="white"
-                />
-                <path
-                  opacity="0.4"
-                  d="M19.65 23.683L14.2 29.133C13.6 28.5997 13.0167 28.0497 12.45 27.483C10.7333 25.7497 9.18334 23.933 7.80001 22.033C6.43334 20.133 5.33334 18.233 4.53334 16.3497C3.73334 14.4497 3.33334 12.633 3.33334 10.8997C3.33334 9.76634 3.53334 8.68301 3.93334 7.68301C4.33334 6.66634 4.96668 5.73301 5.85001 4.89967C6.91668 3.84967 8.08334 3.33301 9.31668 3.33301C9.78334 3.33301 10.25 3.43301 10.6667 3.63301C11.1 3.83301 11.4833 4.13301 11.7833 4.56634L15.65 10.0163C15.95 10.433 16.1667 10.8163 16.3167 11.183C16.4667 11.533 16.55 11.883 16.55 12.1997C16.55 12.5997 16.4333 12.9997 16.2 13.383C15.9833 13.7663 15.6667 14.1663 15.2667 14.5663L14 15.883C13.8167 16.0663 13.7333 16.283 13.7333 16.5497C13.7333 16.683 13.75 16.7997 13.7833 16.933C13.8333 17.0663 13.8833 17.1663 13.9167 17.2663C14.2167 17.8163 14.7333 18.533 15.4667 19.3997C16.2167 20.2663 17.0167 21.1497 17.8833 22.033C18.4833 22.6163 19.0667 23.183 19.65 23.683Z"
-                  fill="white"
-                />
-                <path
-                  d="M36.6167 30.5504C36.6167 31.0171 36.5333 31.5004 36.3667 31.9671C36.3167 32.1004 36.2667 32.2337 36.2 32.3671C35.9167 32.9671 35.55 33.5337 35.0667 34.0671C34.25 34.9671 33.35 35.6171 32.3333 36.0337C32.3167 36.0337 32.3 36.0504 32.2833 36.0504C31.3 36.4504 30.2333 36.6671 29.0833 36.6671C27.3833 36.6671 25.5667 36.2671 23.65 35.4504C21.7333 34.6337 19.8167 33.5337 17.9167 32.1504C17.2667 31.6671 16.6167 31.1837 16 30.6671L21.45 25.2171C21.9167 25.5671 22.3333 25.8337 22.6833 26.0171C22.7667 26.0504 22.8667 26.1004 22.9833 26.1504C23.1167 26.2004 23.25 26.2171 23.4 26.2171C23.6833 26.2171 23.9 26.1171 24.0833 25.9337L25.35 24.6837C25.7667 24.2671 26.1667 23.9504 26.55 23.7504C26.9333 23.5171 27.3167 23.4004 27.7333 23.4004C28.05 23.4004 28.3833 23.4671 28.75 23.6171C29.1167 23.7671 29.5 23.9837 29.9167 24.2671L35.4333 28.1837C35.8667 28.4837 36.1667 28.8337 36.35 29.2504C36.5167 29.6671 36.6167 30.0837 36.6167 30.5504Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <p>021 - 42101</p>
-          </div>
-        </div>
-        <div
-          class="flex items-center overflow-hidden z-0 relative justify-between bg-black text-white rounded-[.875rem] p-4 py-6"
-        >
-          <div class="absolute -z-[1] -left-5">
-            <svg
-              width="192"
-              height="192"
-              viewBox="0 0 192 192"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="96" cy="96" r="96" fill="white" fill-opacity="0.08" />
-              <ellipse
-                cx="96"
-                cy="95.5"
-                rx="69"
-                ry="69.5"
-                fill="white"
-                fill-opacity="0.08"
-              />
-              <circle cx="96" cy="95" r="42" fill="white" fill-opacity="0.07" />
-            </svg>
-          </div>
-          <div class="flex flex-col gap-3 ps-5">
-            <div>
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 21.667C5.40001 21.667 1.66667 25.3837 1.66667 30.0003C1.66667 34.617 5.40001 38.3337 10 38.3337C14.6 38.3337 18.3333 34.6003 18.3333 30.0003C18.3333 25.4003 14.6167 21.667 10 21.667ZM6.59999 26.6003H10C10.6333 26.6003 11.1333 27.117 11.1333 27.7337C11.1333 28.3503 10.6167 28.867 10 28.867H6.59999C5.96666 28.867 5.46667 28.3503 5.46667 27.7337C5.46667 27.117 5.96666 26.6003 6.59999 26.6003ZM13.4 33.4003H6.58336C5.95003 33.4003 5.44999 32.8837 5.44999 32.267C5.44999 31.6503 5.96669 31.1336 6.58336 31.1336H13.4C14.0334 31.1336 14.5333 31.6503 14.5333 32.267C14.5333 32.8837 14.0334 33.4003 13.4 33.4003Z"
-                  fill="white"
-                />
-                <path
-                  opacity="0.4"
-                  d="M28.3333 5H11.6667C6.66666 5 3.33333 7.5 3.33333 13.3333V18.5667C3.33333 19.7833 4.58335 20.55 5.70002 20.0667C7.53335 19.2667 9.61664 18.9667 11.8 19.3167C16.1666 20.0333 19.7333 23.4833 20.6167 27.8167C20.8667 29.0833 20.9 30.3167 20.7333 31.5C20.6 32.4833 21.4 33.35 22.3833 33.35H28.3333C33.3333 33.35 36.6667 30.85 36.6667 25.0167V13.35C36.6667 7.49999 33.3333 5 28.3333 5Z"
-                  fill="white"
-                />
-                <path
-                  d="M20 19.7829C18.6 19.7829 17.1833 19.3496 16.1 18.4663L10.8833 14.2996C10.35 13.8663 10.25 13.083 10.6833 12.5496C11.1167 12.0163 11.9 11.9163 12.4333 12.3496L17.65 16.5163C18.9166 17.533 21.0666 17.533 22.3333 16.5163L27.55 12.3496C28.0833 11.9163 28.8833 11.9996 29.3 12.5496C29.7333 13.083 29.65 13.883 29.1 14.2996L23.8833 18.4663C22.8166 19.3496 21.4 19.7829 20 19.7829Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <p>contact@safar.dotone.online</p>
-          </div>
-        </div>
-      </div>
 
       <div class="mt-12 footer-bottom pt-6">
-        <p class="font-bold w-fit mx-auto mb-4">دسترسی سریع</p>
+        <p class="font-bold w-fit mx-auto mb-4 hidden desktop:block">دسترسی سریع</p>
         <ul
-          class="flex flex-wrap justify-center gap-6 text-black mb-6 *:before:pointer-events-none *:before:absolute *:relative *:before:block *:before:right-0 *:before:left-0 *:before:h-[60%] *:cursor-pointer *:*:cursor-pointer *:before:top-0 *:before:bottom-0 *:before:m-auto *:before:bg-black/35 *:before:blur-[15px] *:*:fs-normal *:before:opacity-0 *:hover:before:opacity-100 *:before:transition-opacity *:before:duration-700 *:before:size-full"
+          class="hidden desktop:flex flex-wrap justify-center gap-6 text-black mb-6 *:before:pointer-events-none *:before:absolute *:relative *:before:block *:before:right-0 *:before:left-0 *:before:h-[60%] *:cursor-pointer *:*:cursor-pointer *:before:top-0 *:before:bottom-0 *:before:m-auto *:before:bg-black/35 *:before:blur-[15px] *:*:fs-normal *:before:opacity-0 *:hover:before:opacity-100 *:before:transition-opacity *:before:duration-700 *:before:size-full"
         >
           <li>
             <a href="#about" class="block">درباره</a>
@@ -1287,7 +1143,7 @@
         </ul>
 
         <div class="relative">
-          <div class="absolute inset-0 m-auto w-fit top-5 -z-[1]">
+          <div class="absolute inset-0 hidden desktop:block m-auto w-fit top-5 -z-[1]">
             <svg
               width="100%"
               height="2"
@@ -1300,14 +1156,14 @@
             </svg>
           </div>
 
-          <div class="mt-8 flex justify-center gap-x-4">
+          <div class="mt-8 flex   justify-center gap-x-4">
             <a
               href="#"
-              class="border bg-black hover:bg-white border-black group rounded-full p-2 transition"
+              class=" bg-primary hover:bg-black   group rounded-full p-2 transition"
             >
               <svg
                 width="24"
-                class="group-hover:*:fill-black"
+
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -1327,12 +1183,11 @@
 
             <a
               href="#"
-              class="border bg-black hover:bg-white border-black group rounded-full p-2 transition"
+              class=" bg-primary hover:bg-black group rounded-full p-2 transition"
             >
               <svg
                 width="24"
                 height="24"
-                class="group-hover:*:fill-black"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1377,11 +1232,10 @@
             </a>
             <a
               href="#"
-              class="border bg-black hover:bg-white border-black group rounded-full p-2 transition"
+              class=" bg-primary hover:bg-black group rounded-full p-2 transition"
             >
               <svg
                 width="24"
-                class="group-hover:*:fill-black"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -1400,10 +1254,9 @@
             </a>
             <a
               href="#"
-              class="border bg-black hover:bg-white border-black group rounded-full p-2 transition"
+              class=" bg-primary hover:bg-black group rounded-full p-2 transition"
             >
               <svg
-                class="group-hover:*:fill-black"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -1426,7 +1279,7 @@
           </div>
         </div>
         <div
-          class="flex items-center justify-between mt-4 flex-col text-center sm:flex-row sm:text-right"
+          class="flex items-center border-t desktop:border-t-0 border-t-[#E1E1E1] pt-4.5 justify-between mt-4 flex-col text-center sm:flex-row sm:text-right"
         >
           <p class="font-light text-sm">
             تمامی حقوق این سایت متعلق به شرکت آوان سفر می‌باشد.
@@ -1435,6 +1288,8 @@
         </div>
       </div>
     </footer>
-    <script src="C:\Users\god\Desktop\avan\src\assets\js\blog.js"></script>
+    <script src="/js/runtime.118ca815.js"></script>
+<script src="/js/blog.1.cacfb02a.js"></script>
+
   </body>
 </html>
